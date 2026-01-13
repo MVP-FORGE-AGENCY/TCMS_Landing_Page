@@ -1,55 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+  html {
+    scroll-behavior: smooth;
   }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-  }
-}
-
-@layer base {
+  
   body {
-    @apply bg-white text-slate-900 antialiased;
+    @apply bg-white text-text-dark antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
   }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-white rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
   }
   
-  .gradient-text {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600;
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-4 bg-transparent border-2 border-white/30 text-white rounded-lg font-semibold text-lg transition-all duration-300 hover:bg-white/10;
   }
   
-  .glass-effect {
-    @apply backdrop-blur-md bg-white/80 border border-white/20;
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-4 bg-transparent border-2 border-primary text-primary rounded-lg font-semibold text-lg transition-all duration-300 hover:bg-primary hover:text-white;
   }
   
-  .section-padding {
-    @apply py-20 md:py-32;
+  .section {
+    @apply py-24 md:py-32;
   }
   
-  .container-padding {
-    @apply px-4 sm:px-6 lg:px-8;
+  .container-lg {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 }
 
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Custom scrollbar */
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -58,7 +48,7 @@ html {
 
 ::-webkit-scrollbar-thumb {
   background: #888;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {

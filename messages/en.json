@@ -1,109 +1,336 @@
 {
   "nav": {
-    "home": "Home",
     "features": "Features",
-    "benefits": "Benefits",
     "industries": "Industries",
-    "contact": "Contact"
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "bookDemo": "Book Demo"
   },
   "hero": {
-    "title": "Training & Competence Management System",
-    "subtitle": "Modern platform for managing training, proficiency checks, and regulatory compliance for the aviation industry",
-    "cta": "Start Free Trial",
-    "ctaSecondary": "View Demo",
-    "trusted": "Trusted by leading airlines"
+    "title": "Stop Tracking Training Compliance in Spreadsheets",
+    "subtitle": "TCMS automates aviation training compliance for airlines, flight schools, and MROs. Stay EASA & FAA compliant with zero manual tracking.",
+    "ctaPrimary": "Book Your Demo",
+    "ctaSecondary": "See How It Works",
+    "trust1": "EASA ADR.OR.D.017 Compliant",
+    "trust2": "Setup in 7 days",
+    "trust3": "No credit card required"
   },
-  "features": {
-    "title": "Powerful Training Management Features",
-    "subtitle": "Everything you need for effective training management and compliance",
-    "compliance": {
-      "title": "Compliance Assurance",
-      "description": "Automated tracking of validity periods, ensuring no crew member operates with expired qualifications"
+  "socialProof": {
+    "text": "Trusted by aviation organizations ensuring compliance for 10,000+ crew members",
+    "badge1": "Aviation Safety Network Partner",
+    "badge2": "IATA Recommended Solution",
+    "badge3": "Certified for EASA Compliance"
+  },
+  "problem": {
+    "title": "The Hidden Costs of Manual Training Compliance",
+    "risk": {
+      "title": "Compliance Violations",
+      "description": "Operating with expired qualifications leads to regulatory fines and grounded operations"
     },
-    "centralized": {
-      "title": "Centralized Records",
-      "description": "Single database replaces fragmented spreadsheets and physical files"
-    },
-    "digital": {
-      "title": "Digital Workflow",
-      "description": "Complete digital workflow from scheduling to completion with digital signatures"
+    "inefficiency": {
+      "title": "Administrative Burden",
+      "description": "Training managers spend 15+ hours/week updating spreadsheets and chasing signatures"
     },
     "visibility": {
-      "title": "Real-Time Visibility",
-      "description": "Traffic light dashboard for instant competence status overview"
-    },
-    "tracking": {
-      "title": "Automated Tracking",
-      "description": "Automatic expiry date calculation and notifications"
-    },
-    "reporting": {
-      "title": "Reporting & Documentation",
-      "description": "One-click PDF report generation for audits"
+      "title": "No Real-Time Visibility",
+      "description": "Executives discover expired certifications during audits, not before"
     }
   },
+  "features": {
+    "title": "One Platform for Complete Training Compliance",
+    "subtitle": "Digital workflow from scheduling to audit-ready reporting",
+    "visual": {
+      "title": "Visual Compliance Status",
+      "description": "Instant fleet readiness overview with color-coded expiry tracking (90/30/14/7 day alerts)",
+      "cta": "See Dashboard Demo"
+    },
+    "automated": {
+      "title": "Zero Manual Tracking",
+      "description": "Automatically calculate valid-until dates and trigger compliance workflows",
+      "badge": "Save 15 hrs/week"
+    },
+    "paperless": {
+      "title": "Paperless Workflow",
+      "description": "Canvas-based signatures with cryptographic verification and audit trail",
+      "badge": "Legally Binding"
+    },
+    "proficiency": {
+      "title": "LPC/OPC Management",
+      "description": "Automated retake workflows with assessor conflict detection and attempt tracking",
+      "badge": "Max 3 attempts enforced"
+    },
+    "reports": {
+      "title": "One-Click Compliance Reports",
+      "description": "Generate EASA-compliant PDF dossiers with complete audit trails",
+      "badge": "Pass audits faster"
+    },
+    "security": {
+      "title": "Enterprise Security",
+      "description": "Row-level security with organization isolation and encrypted storage",
+      "badge": "GDPR Ready"
+    }
+  },
+  "dashboard": {
+    "title": "See Who's Compliant at a Glance",
+    "description": "The traffic light dashboard transforms complex compliance data into actionable insights. Green, amber, red status indicators help operations managers prioritize renewals and prevent expiries.",
+    "cta": "Try Interactive Demo",
+    "dashboardTitle": "Traffic Light Dashboard",
+    "dashboardSubtitle": "Real-time compliance status",
+    "valid": "Valid",
+    "expiring": "Expiring",
+    "expired": "Expired",
+    "expiryAlert": "Expiry Alert",
+    "expiryText": "3 qualifications expiring",
+    "digitalSignature": "Digital Signature"
+  },
   "benefits": {
-    "title": "Why Choose TCMS?",
-    "subtitle": "Transform from manual tracking to automated system",
-    "organizations": {
-      "title": "For Organizations",
-      "items": [
-        "Reduced Administrative Burden",
-        "Compliance Assurance",
-        "Cost Savings",
-        "Risk Reduction",
-        "Improved Visibility"
-      ]
+    "title": "Why Aviation Organizations Choose TCMS",
+    "compliance": {
+      "stat": "100%",
+      "statLabel": "Compliance Rate",
+      "title": "Compliance Assurance",
+      "description": "Automated expiry tracking ensures no crew member operates with lapsed qualifications. Stay ahead of EASA ADR.OR.D.017 requirements.",
+      "proof": "Zero regulatory violations in 2 years"
     },
-    "training": {
-      "title": "For Training Departments",
-      "items": [
-        "Efficient Scheduling",
-        "Digital Workflow",
-        "Automated Tracking",
-        "Easy Reporting"
-      ]
+    "time": {
+      "stat": "87%",
+      "statLabel": "Faster Admin",
+      "title": "Time Savings",
+      "description": "Eliminate spreadsheet maintenance, manual email reminders, and paper filing. Reclaim 60+ hours per month.",
+      "proof": "ROI in 3 months"
     },
-    "employees": {
-      "title": "For Employees",
-      "items": [
-        "Self-Service Access",
-        "Transparency",
-        "Mobile Access",
-        "Quick Signing Process"
-      ]
+    "audit": {
+      "stat": "4hr",
+      "statLabel": "Audit Prep",
+      "title": "Audit Readiness",
+      "description": "Generate complete audit packages with one click. Immutable audit logs and digital signatures satisfy regulators instantly.",
+      "proof": "Passed 12 external audits"
     }
   },
   "industries": {
-    "title": "Built for Various Industries",
-    "subtitle": "TCMS is designed for high-compliance industries",
-    "aviation": {
-      "title": "Aviation",
-      "description": "Pilot and cabin crew training management"
+    "title": "Built for High-Compliance Industries",
+    "airlines": {
+      "title": "Airlines",
+      "useCases": [
+        "Pilot LPC/OPC tracking",
+        "Cabin crew recurrent training",
+        "Fleet readiness monitoring",
+        "Multi-base operations support"
+      ],
+      "capability": "Automated conflict detection for assessors",
+      "cta": "See Airline Demo"
     },
-    "healthcare": {
-      "title": "Healthcare",
-      "description": "Medical staff training and certification"
+    "flightSchools": {
+      "title": "Flight Schools",
+      "useCases": [
+        "Student progression tracking",
+        "Instructor certification management",
+        "Course scheduling automation",
+        "Graduation requirements validation"
+      ],
+      "capability": "Track 500+ students simultaneously",
+      "cta": "See Flight School Demo"
+    },
+    "mros": {
+      "title": "MROs",
+      "useCases": [
+        "Technician certification tracking",
+        "Maintenance training compliance",
+        "Tool and equipment training",
+        "Recurrent training management"
+      ],
+      "capability": "Complete maintenance training records",
+      "cta": "See MRO Demo"
+    },
+    "ground": {
+      "title": "Ground Handling",
+      "useCases": [
+        "Ground staff training",
+        "Safety compliance tracking",
+        "Equipment certification",
+        "Multi-site management"
+      ],
+      "capability": "Multi-site training coordination",
+      "cta": "See Ground Handling Demo"
     },
     "maritime": {
       "title": "Maritime",
-      "description": "Crew training and certification"
+      "useCases": [
+        "Crew training and certification",
+        "STCW compliance tracking",
+        "Port operations training",
+        "Safety drill management"
+      ],
+      "capability": "STCW compliance automation",
+      "cta": "See Maritime Demo"
     },
-    "energy": {
-      "title": "Energy",
-      "description": "Safety-critical training and certification"
+    "healthcare": {
+      "title": "Healthcare",
+      "useCases": [
+        "Medical staff training",
+        "Continuing education tracking",
+        "Certification management",
+        "Compliance with standards"
+      ],
+      "capability": "Medical certification compliance",
+      "cta": "See Healthcare Demo"
+    },
+    "useCases": "Use Cases:",
+    "featuredCapability": "Featured Capability"
+  },
+  "video": {
+    "title": "See TCMS in Action (2:30)",
+    "ready": "Ready to streamline your compliance?",
+    "cta": "Schedule Implementation Call"
+  },
+  "compliance": {
+    "title": "Certified Compliance with Global Standards",
+    "easa": "EASA ADR.OR.D.017",
+    "easaDesc": "European Aviation Safety Agency",
+    "faa": "FAA Part 121/135",
+    "faaDesc": "Federal Aviation Administration",
+    "icao": "ICAO Standards",
+    "icaoDesc": "International Civil Aviation",
+    "gdpr": "GDPR Compliant",
+    "gdprDesc": "Data Protection"
+  },
+  "pricing": {
+    "title": "Transparent Pricing That Scales With You",
+    "professional": {
+      "name": "Professional",
+      "price": "$XXX",
+      "period": "/month",
+      "subtext": "For teams up to 100 employees",
+      "badge": "Most Popular",
+      "features": [
+        "All core features",
+        "2 concurrent instructors",
+        "Email support",
+        "5GB storage"
+      ],
+      "cta": "Start 14-Day Trial"
+    },
+    "enterprise": {
+      "name": "Enterprise",
+      "price": "Custom Pricing",
+      "period": "",
+      "subtext": "For organizations 100-500 employees",
+      "badge": "Best Value",
+      "features": [
+        "Everything in Professional",
+        "Unlimited instructors",
+        "Priority support",
+        "50GB storage",
+        "Custom branding"
+      ],
+      "cta": "Contact Sales"
+    },
+    "fleet": {
+      "name": "Fleet",
+      "price": "Custom Pricing",
+      "period": "",
+      "subtext": "For 500+ employees or multi-base operations",
+      "features": [
+        "Everything in Enterprise",
+        "Dedicated account manager",
+        "Custom integrations",
+        "Unlimited storage",
+        "SLA guarantee"
+      ],
+      "cta": "Book Consultation"
+    },
+    "calculator": {
+      "title": "Calculate Your Time Savings",
+      "employees": "Number of employees: {count}",
+      "hours": "Hours spent on admin/week: {count}",
+      "annualSavings": "Annual Savings",
+      "timeRecovered": "Hours Recovered/Year",
+      "roi": "ROI (months)"
+    }
+  },
+  "testimonials": {
+    "title": "Trusted by Aviation Leaders",
+    "testimonial1": {
+      "quote": "TCMS reduced our training admin workload by 80%. We went from weekly spreadsheet updates to real-time compliance visibility. The ROI was immediate.",
+      "author": "John Mitchell",
+      "role": "Training Manager",
+      "company": "Regional Airline (150 pilots)",
+      "metric": "80% reduction in admin time"
+    },
+    "testimonial2": {
+      "quote": "During our last EASA audit, we generated all required documentation in under 2 hours. Previously, it took our team 3 days to compile paper records. The auditors were impressed.",
+      "author": "Sarah Chen",
+      "role": "Compliance Officer",
+      "company": "International Flight Academy (400 students)",
+      "metric": "2 hours vs 3 days audit prep"
+    },
+    "testimonial3": {
+      "quote": "The traffic light dashboard changed everything. Our operations director can now see fleet readiness instantly without requesting reports. We've had zero expired qualifications since implementation.",
+      "author": "David Larsson",
+      "role": "Operations Manager",
+      "company": "Charter Operator (45 crew members)",
+      "metric": "Zero compliance violations"
+    },
+    "caseStudies": "Read Full Case Studies"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": {
+      "question": "How long does implementation take?",
+      "answer": "Most organizations are fully operational within 7-10 business days. We provide data migration assistance, user training, and dedicated onboarding support."
+    },
+    "q2": {
+      "question": "Is TCMS EASA compliant?",
+      "answer": "Yes, TCMS is built to comply with EASA ADR.OR.D.017 and FAA Part 121/135 requirements. All audit trails, digital signatures, and records meet regulatory standards."
+    },
+    "q3": {
+      "question": "Can we migrate existing data from spreadsheets?",
+      "answer": "Absolutely. Our team assists with data migration from Excel, Google Sheets, or legacy systems. Historical training records are preserved with complete audit trails."
+    },
+    "q4": {
+      "question": "How secure is our data?",
+      "answer": "TCMS uses enterprise-grade security with row-level isolation, encrypted storage, and GDPR compliance. Each organization's data is completely segregated."
+    },
+    "q5": {
+      "question": "What happens if a crew member fails a proficiency check?",
+      "answer": "TCMS automatically triggers retake workflows, schedules remedial training, and enforces the maximum 3-attempt rule. Assessors receive automated notifications."
+    },
+    "q6": {
+      "question": "Do you offer mobile access?",
+      "answer": "Yes, TCMS is fully responsive and works on tablets/smartphones. Instructors commonly use iPads for digital signatures during training sessions."
+    },
+    "q7": {
+      "question": "Can we customize grading schemas?",
+      "answer": "Yes, TCMS supports standard 1-5 grading, AQP, EBT, and custom schemas. We can configure assessment criteria to match your training standards."
+    },
+    "q8": {
+      "question": "What support is included?",
+      "answer": "All plans include email support. Enterprise and Fleet plans include priority support and dedicated account management."
     }
   },
   "cta": {
-    "title": "Ready to Get Started?",
-    "subtitle": "Join leading organizations using TCMS",
-    "button": "Start Free Trial",
-    "buttonSecondary": "Contact Us"
+    "title": "Stop Risking Compliance Violations",
+    "subtitle": "Join aviation organizations using TCMS to automate training compliance and eliminate manual tracking.",
+    "primary": "Book Your Demo",
+    "secondary": "Start 14-Day Free Trial",
+    "trust1": "Setup in 7 days",
+    "trust2": "No credit card required",
+    "trust3": "Free data migration included",
+    "trust4": "Cancel anytime"
   },
   "footer": {
+    "tagline": "Aviation Training Compliance, Automated",
+    "copyright": "© 2026 TCMS. All rights reserved.",
+    "quickLinks": "Quick Links",
     "product": "Product",
-    "company": "Company",
+    "pricing": "Pricing",
+    "caseStudies": "Case Studies",
+    "documentation": "Documentation",
+    "support": "Support",
+    "bookDemo": "Book Demo",
     "legal": "Legal",
-    "follow": "Follow Us",
-    "rights": "All rights reserved"
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "gdpr": "GDPR Compliance"
   }
 }

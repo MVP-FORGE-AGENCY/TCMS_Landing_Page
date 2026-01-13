@@ -1,129 +1,124 @@
-'use client';
+'use client'
 
-import { useTranslations } from 'next-intl';
-import { motion } from 'framer-motion';
-import { useInView } from 'framer-motion';
-import { useRef } from 'react';
-import { Star, Quote } from 'lucide-react';
-import ImagePlaceholder from '@/components/ImagePlaceholder';
+import { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { ChevronLeft, ChevronRight, Quote } from 'lucide-react'
+import { useTranslations } from 'next-intl'
+import { SectionHeading } from '@/components/ui/SectionHeading'
 
-export default function Testimonials() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
+export function Testimonials() {
+  const t = useTranslations('testimonials')
+  const [current, setCurrent] = useState(0)
 
   const testimonials = [
     {
-      name: 'Иван Петров',
-      role: 'Training Manager',
-      company: 'Bulgarian Airways',
-      content: 'TCMS трансформира начина, по който управляваме обученията. Намалихме административното време с 70%.',
-      rating: 5,
-      gradient: 'from-blue-500 to-cyan-500',
+      quote: t('testimonial1.quote'),
+      author: t('testimonial1.author'),
+      role: t('testimonial1.role'),
+      company: t('testimonial1.company'),
+      metric: t('testimonial1.metric'),
     },
     {
-      name: 'Мария Георгиева',
-      role: 'Compliance Officer',
-      company: 'Hemus Air',
-      content: 'Одитите вече не са стресиращи. Всичко е на едно място, цифрово и винаги актуално.',
-      rating: 5,
-      gradient: 'from-purple-500 to-pink-500',
+      quote: t('testimonial2.quote'),
+      author: t('testimonial2.author'),
+      role: t('testimonial2.role'),
+      company: t('testimonial2.company'),
+      metric: t('testimonial2.metric'),
     },
     {
-      name: 'Георги Димитров',
-      role: 'Chief Pilot',
-      company: 'Air Sofia',
-      content: 'Като пилот оценявам прозрачността. Винаги знам какви обучения имам и кога изтичат.',
-      rating: 5,
-      gradient: 'from-green-500 to-emerald-500',
+      quote: t('testimonial3.quote'),
+      author: t('testimonial3.author'),
+      role: t('testimonial3.role'),
+      company: t('testimonial3.company'),
+      metric: t('testimonial3.metric'),
     },
-  ];
+  ]
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % testimonials.length)
+    }, 8000)
+    return () => clearInterval(timer)
+  }, [testimonials.length])
 
   return (
-    <section
-      ref={ref}
-      className="section-padding bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 relative overflow-hidden"
-    >
-      <div className="container mx-auto container-padding">
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-            <span className="gradient-text">Какво казват клиентите</span>
-          </h2>
-          <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-            Реални отзиви от авиационни професионалисти
-          </p>
-        </motion.div>
-
-        {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
+    <section id="testimonials" className="section bg-white">
+      <div className="container-lg">
+        <SectionHeading title={t('title')} />
+        
+        <div className="relative max-w-4xl mx-auto">
+          <AnimatePresence mode="wait">
             <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 50 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              whileHover={{ y: -10, scale: 1.02 }}
-              className="relative group"
+              key={current}
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -50 }}
+              transition={{ duration: 0.3 }}
+              className="bg-surface-light rounded-2xl p-8 md:p-12"
             >
-              {/* Card */}
-              <div className="relative p-8 bg-white rounded-2xl shadow-xl border border-slate-200 h-full flex flex-col">
-                {/* Quote Icon */}
-                <div className="absolute top-4 right-4 opacity-10">
-                  <Quote className="w-16 h-16 text-blue-600" />
-                </div>
-
-                {/* Stars */}
-                <div className="flex space-x-1 mb-6 relative z-10">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <motion.div
-                      key={i}
-                      initial={{ scale: 0, rotate: -180 }}
-                      animate={isInView ? { scale: 1, rotate: 0 } : {}}
-                      transition={{ duration: 0.5, delay: index * 0.2 + i * 0.1 }}
-                    >
-                      <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                    </motion.div>
-                  ))}
-                </div>
-
-                {/* Content */}
-                <p className="text-slate-700 text-lg mb-6 flex-grow relative z-10 italic">
-                  "{testimonial.content}"
-                </p>
-
-                {/* Author */}
-                <div className="flex items-center space-x-4 relative z-10">
-                  {/* Avatar Placeholder */}
-                  <ImagePlaceholder
-                    className="w-12 h-12 flex-shrink-0"
-                    gradient={testimonial.gradient}
-                    animate={false}
-                  />
-                  <div>
-                    <div className="font-bold text-slate-900">
-                      {testimonial.name}
+              <div className="flex flex-col md:flex-row gap-8 items-center">
+                {/* Avatar */}
+                <div className="flex-shrink-0 w-20 h-20 rounded-full bg-gradient-to-br from-primary to-accent" />
+                
+                <div className="flex-grow">
+                  <Quote className="w-10 h-10 text-primary/20 mb-4" />
+                  <p className="text-xl md:text-2xl italic text-text-dark mb-6 leading-relaxed">
+                    &ldquo;{testimonials[current].quote}&rdquo;
+                  </p>
+                  
+                  <div className="flex items-center justify-between flex-wrap gap-4">
+                    <div>
+                      <div className="font-bold text-text-dark text-lg">
+                        {testimonials[current].author}
+                      </div>
+                      <div className="text-text-medium">
+                        {testimonials[current].role}
+                      </div>
+                      <div className="text-sm text-text-medium">
+                        {testimonials[current].company}
+                      </div>
                     </div>
-                    <div className="text-sm text-slate-600">
-                      {testimonial.role}
-                    </div>
-                    <div className="text-xs text-slate-500">
-                      {testimonial.company}
+                    
+                    <div className="px-4 py-2 bg-primary/10 rounded-lg border border-primary/20">
+                      <div className="text-xs text-primary font-semibold">Key Metric</div>
+                      <div className="text-sm font-bold text-text-dark">
+                        {testimonials[current].metric}
+                      </div>
                     </div>
                   </div>
                 </div>
-
-                {/* Gradient overlay on hover */}
-                <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${testimonial.gradient} opacity-0 group-hover:opacity-5 transition-opacity pointer-events-none`} />
               </div>
             </motion.div>
-          ))}
+          </AnimatePresence>
+          
+          {/* Navigation */}
+          <button
+            onClick={() => setCurrent((prev) => (prev - 1 + testimonials.length) % testimonials.length)}
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors"
+          >
+            <ChevronLeft className="w-6 h-6 text-text-dark" />
+          </button>
+          <button
+            onClick={() => setCurrent((prev) => (prev + 1) % testimonials.length)}
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors"
+          >
+            <ChevronRight className="w-6 h-6 text-text-dark" />
+          </button>
+          
+          {/* Dots */}
+          <div className="flex justify-center gap-2 mt-8">
+            {testimonials.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setCurrent(i)}
+                className={`h-3 rounded-full transition-all ${
+                  i === current ? 'bg-primary w-8' : 'bg-gray-300 w-3'
+                }`}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
-  );
+  )
 }

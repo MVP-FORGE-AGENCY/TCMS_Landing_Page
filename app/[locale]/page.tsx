@@ -1,26 +1,37 @@
-import { useTranslations } from 'next-intl';
-import Hero from '@/components/sections/Hero';
-import Features from '@/components/sections/Features';
-import Benefits from '@/components/sections/Benefits';
-import InteractiveDemo from '@/components/sections/InteractiveDemo';
-import Industries from '@/components/sections/Industries';
-import Testimonials from '@/components/sections/Testimonials';
-import CTA from '@/components/sections/CTA';
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
+import { Navigation } from '@/components/layout/Navigation'
+import { Footer } from '@/components/layout/Footer'
+import { Hero } from '@/components/sections/Hero'
+import { SocialProof } from '@/components/sections/SocialProof'
+import { ProblemStatement } from '@/components/sections/ProblemStatement'
+import { Features } from '@/components/sections/Features'
+import { Dashboard } from '@/components/sections/Dashboard'
+import { Benefits } from '@/components/sections/Benefits'
+import { Industries } from '@/components/sections/Industries'
+import { VideoDemo } from '@/components/sections/VideoDemo'
+import { Compliance } from '@/components/sections/Compliance'
+import { Pricing } from '@/components/sections/Pricing'
+import { Testimonials } from '@/components/sections/Testimonials'
+import { FAQ } from '@/components/sections/FAQ'
+import { FinalCTA } from '@/components/sections/FinalCTA'
 
-export default function HomePage() {
+export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main>
       <Navigation />
       <Hero />
+      <SocialProof />
+      <ProblemStatement />
       <Features />
-      <InteractiveDemo />
+      <Dashboard />
       <Benefits />
       <Industries />
+      <VideoDemo />
+      <Compliance />
+      <Pricing />
       <Testimonials />
-      <CTA />
+      <FAQ />
+      <FinalCTA />
       <Footer />
     </main>
-  );
+  )
 }

@@ -1,15 +1,10 @@
-const createNextIntlPlugin = require('next-intl/plugin');
+const createNextIntlPlugin = require('next-intl/plugin')
 
-const withNextIntl = createNextIntlPlugin('./i18n.ts');
+const withNextIntl = createNextIntlPlugin('./i18n.ts')
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  images: {
-    domains: [],
-  },
-  experimental: {
-    optimizePackageImports: ['lucide-react'],
-  },
-};
+  reactStrictMode: true,
+}
 
-module.exports = withNextIntl(nextConfig);
+module.exports = withNextIntl(nextConfig)
