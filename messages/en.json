@@ -1,0 +1,109 @@
+{
+  "nav": {
+    "home": "Home",
+    "features": "Features",
+    "benefits": "Benefits",
+    "industries": "Industries",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Training & Competence Management System",
+    "subtitle": "Modern platform for managing training, proficiency checks, and regulatory compliance for the aviation industry",
+    "cta": "Start Free Trial",
+    "ctaSecondary": "View Demo",
+    "trusted": "Trusted by leading airlines"
+  },
+  "features": {
+    "title": "Powerful Training Management Features",
+    "subtitle": "Everything you need for effective training management and compliance",
+    "compliance": {
+      "title": "Compliance Assurance",
+      "description": "Automated tracking of validity periods, ensuring no crew member operates with expired qualifications"
+    },
+    "centralized": {
+      "title": "Centralized Records",
+      "description": "Single database replaces fragmented spreadsheets and physical files"
+    },
+    "digital": {
+      "title": "Digital Workflow",
+      "description": "Complete digital workflow from scheduling to completion with digital signatures"
+    },
+    "visibility": {
+      "title": "Real-Time Visibility",
+      "description": "Traffic light dashboard for instant competence status overview"
+    },
+    "tracking": {
+      "title": "Automated Tracking",
+      "description": "Automatic expiry date calculation and notifications"
+    },
+    "reporting": {
+      "title": "Reporting & Documentation",
+      "description": "One-click PDF report generation for audits"
+    }
+  },
+  "benefits": {
+    "title": "Why Choose TCMS?",
+    "subtitle": "Transform from manual tracking to automated system",
+    "organizations": {
+      "title": "For Organizations",
+      "items": [
+        "Reduced Administrative Burden",
+        "Compliance Assurance",
+        "Cost Savings",
+        "Risk Reduction",
+        "Improved Visibility"
+      ]
+    },
+    "training": {
+      "title": "For Training Departments",
+      "items": [
+        "Efficient Scheduling",
+        "Digital Workflow",
+        "Automated Tracking",
+        "Easy Reporting"
+      ]
+    },
+    "employees": {
+      "title": "For Employees",
+      "items": [
+        "Self-Service Access",
+        "Transparency",
+        "Mobile Access",
+        "Quick Signing Process"
+      ]
+    }
+  },
+  "industries": {
+    "title": "Built for Various Industries",
+    "subtitle": "TCMS is designed for high-compliance industries",
+    "aviation": {
+      "title": "Aviation",
+      "description": "Pilot and cabin crew training management"
+    },
+    "healthcare": {
+      "title": "Healthcare",
+      "description": "Medical staff training and certification"
+    },
+    "maritime": {
+      "title": "Maritime",
+      "description": "Crew training and certification"
+    },
+    "energy": {
+      "title": "Energy",
+      "description": "Safety-critical training and certification"
+    }
+  },
+  "cta": {
+    "title": "Ready to Get Started?",
+    "subtitle": "Join leading organizations using TCMS",
+    "button": "Start Free Trial",
+    "buttonSecondary": "Contact Us"
+  },
+  "footer": {
+    "product": "Product",
+    "company": "Company",
+    "legal": "Legal",
+    "follow": "Follow Us",
+    "rights": "All rights reserved"
+  }
+}
