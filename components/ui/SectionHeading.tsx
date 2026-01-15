@@ -5,6 +5,7 @@ interface SectionHeadingProps {
   subtitle?: string
   centered?: boolean
   light?: boolean
+  badge?: string
   className?: string
 }
 
@@ -13,6 +14,7 @@ export function SectionHeading({
   subtitle, 
   centered = true,
   light = false,
+  badge,
   className 
 }: SectionHeadingProps) {
   return (
@@ -21,16 +23,26 @@ export function SectionHeading({
       centered && 'mx-auto text-center',
       className
     )}>
+      {badge && (
+        <span className={cn(
+          'inline-block px-4 py-1.5 rounded-full text-sm font-semibold mb-4',
+          light 
+            ? 'bg-white/10 text-white border border-white/20' 
+            : 'bg-primary/10 text-primary'
+        )}>
+          {badge}
+        </span>
+      )}
       <h2 className={cn(
-        'text-heading-sm md:text-heading font-bold mb-4',
-        light ? 'text-white' : 'text-text-dark'
+        'text-h2 md:text-heading font-bold mb-4',
+        light ? 'text-white' : 'text-slate-900'
       )}>
         {title}
       </h2>
       {subtitle && (
         <p className={cn(
           'text-body-lg',
-          light ? 'text-white/80' : 'text-text-medium'
+          light ? 'text-slate-300' : 'text-slate-600'
         )}>
           {subtitle}
         </p>

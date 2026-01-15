@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation'
 import { locales } from '@/i18n'
 import '../globals.css'
 import type { Metadata } from 'next'
+import { PageLayout } from '@/components/layout/PageLayout'
 
 export const metadata: Metadata = {
   title: 'TCMS - Aviation Training Compliance Software | EASA Compliant',
@@ -36,7 +37,9 @@ export default async function LocaleLayout({
     <html lang={resolvedLocale}>
       <body>
         <NextIntlClientProvider messages={messages}>
-          {children}
+          <PageLayout>
+            {children}
+          </PageLayout>
         </NextIntlClientProvider>
       </body>
     </html>

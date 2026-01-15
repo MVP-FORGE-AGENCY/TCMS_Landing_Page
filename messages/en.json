@@ -1,7 +1,46 @@
 {
   "nav": {
-    "features": "Features",
-    "industries": "Industries",
+    "solutionsLabel": "Solutions",
+    "industriesLabel": "Industries",
+    "productLabel": "Product",
+    "solutions": {
+      "trainingCompliance": "Training Compliance",
+      "trainingComplianceDesc": "Automated tracking and expiry management",
+      "proficiencyChecks": "Proficiency Checks",
+      "proficiencyChecksDesc": "LPC/OPC management and retake workflows",
+      "auditReporting": "Audit Reporting",
+      "auditReportingDesc": "One-click compliance reports and audit trails",
+      "digitalSignatures": "Digital Signatures",
+      "digitalSignaturesDesc": "Canvas-based legally binding signatures"
+    },
+    "industries": {
+      "airlines": "Airlines",
+      "airlinesDesc": "Pilot and cabin crew compliance",
+      "flightSchools": "Flight Schools",
+      "flightSchoolsDesc": "Student progression and instructor management",
+      "mros": "MROs",
+      "mrosDesc": "Technician certification tracking",
+      "groundHandling": "Ground Handling",
+      "groundHandlingDesc": "Ground staff training compliance",
+      "maritime": "Maritime",
+      "maritimeDesc": "STCW compliance and crew training",
+      "healthcare": "Healthcare",
+      "healthcareDesc": "Medical staff training and certification"
+    },
+    "product": {
+      "trafficLight": "Traffic Light Dashboard",
+      "trafficLightDesc": "Visual compliance status at a glance",
+      "automatedTracking": "Automated Tracking",
+      "automatedTrackingDesc": "Zero manual spreadsheet updates",
+      "paperlessWorkflow": "Paperless Workflow",
+      "paperlessWorkflowDesc": "Digital signatures and document management",
+      "lpcOpc": "LPC/OPC Management",
+      "lpcOpcDesc": "Automated retake workflows and assessor conflict detection",
+      "complianceReports": "Compliance Reports",
+      "complianceReportsDesc": "EASA-compliant PDF dossiers",
+      "enterpriseSecurity": "Enterprise Security",
+      "enterpriseSecurityDesc": "Row-level security and GDPR compliance"
+    },
     "pricing": "Pricing",
     "faq": "FAQ",
     "bookDemo": "Book Demo"

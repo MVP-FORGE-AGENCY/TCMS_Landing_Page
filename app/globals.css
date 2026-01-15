@@ -1,33 +1,188 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  :root {
+    /* TCMS Brand Identity System - CSS Variables */
+    
+    /* Primary Brand Colors */
+    --color-primary: #0066FF;
+    --color-primary-hover: #0052CC;
+    --color-primary-active: #0041A3;
+    --color-secondary: #1E293B;
+    --color-light: #F1F5F9;
+    
+    /* Status Colors - Traffic Light System */
+    --color-success: #10B981;
+    --color-success-light: #D1FAE5;
+    --color-success-dark: #059669;
+    --color-warning: #F59E0B;
+    --color-warning-light: #FEF3C7;
+    --color-warning-dark: #D97706;
+    --color-error: #EF4444;
+    --color-error-light: #FEE2E2;
+    --color-error-dark: #DC2626;
+    
+    /* Grayscale */
+    --color-slate-50: #F1F5F9;
+    --color-slate-100: #E2E8F0;
+    --color-slate-200: #CBD5E1;
+    --color-slate-300: #94A3B8;
+    --color-slate-400: #64748B;
+    --color-slate-500: #475569;
+    --color-slate-600: #334155;
+    --color-slate-700: #1E293B;
+    --color-slate-900: #0F172A;
+    
+    /* Typography */
+    --font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    --font-family-mono: 'Courier New', Courier, monospace;
+    
+    /* Spacing */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 12px;
+    --spacing-lg: 16px;
+    --spacing-xl: 24px;
+    --spacing-2xl: 32px;
+    --spacing-3xl: 48px;
+    
+    /* Border Radius */
+    --radius-sm: 6px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-full: 9999px;
+  }
+  
   html {
     scroll-behavior: smooth;
   }
   
   body {
-    @apply bg-white text-text-dark antialiased;
-    font-family: 'Inter', system-ui, sans-serif;
+    @apply bg-white text-text-primary antialiased;
+    font-family: var(--font-family-base);
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  /* Typography Hierarchy */
+  h1 {
+    @apply text-h1 text-slate-900;
+  }
+  
+  h2 {
+    @apply text-h2 text-slate-900;
+  }
+  
+  h3 {
+    @apply text-h3 text-slate-900;
+  }
+  
+  h4 {
+    @apply text-h4 text-slate-900;
+  }
+  
+  h5 {
+    @apply text-h5 text-slate-900;
+  }
+  
+  /* Link Styling */
+  a {
+    @apply text-primary transition-colors hover:text-primary-hover;
+  }
+  
+  /* Focus States for Accessibility */
+  :focus-visible {
+    @apply outline-none ring-2 ring-primary ring-offset-2;
   }
 }
 
 @layer components {
+  /* Primary Button - Brand Identity */
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-white rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 
+           bg-primary text-white rounded-brand font-semibold text-base 
+           transition-all duration-300 
+           hover:bg-primary-hover hover:shadow-button hover:-translate-y-0.5
+           active:bg-primary-active active:translate-y-0
+           focus:ring-2 focus:ring-primary focus:ring-offset-2;
   }
   
+  .btn-primary-large {
+    @apply btn-primary px-8 py-4 text-lg min-h-[60px];
+  }
+  
+  /* Secondary Button */
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 px-8 py-4 bg-transparent border-2 border-white/30 text-white rounded-lg font-semibold text-lg transition-all duration-300 hover:bg-white/10;
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 
+           bg-slate-100 text-slate-900 border border-slate-300 rounded-brand 
+           font-semibold text-base transition-all duration-300 
+           hover:bg-slate-50 hover:shadow-card-hover
+           active:bg-slate-200;
   }
   
+  /* Ghost Button (on dark backgrounds) */
   .btn-ghost {
-    @apply inline-flex items-center justify-center gap-2 px-8 py-4 bg-transparent border-2 border-primary text-primary rounded-lg font-semibold text-lg transition-all duration-300 hover:bg-primary hover:text-white;
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 
+           bg-transparent border-2 border-white/30 text-white rounded-brand 
+           font-semibold text-base transition-all duration-300 
+           hover:bg-white/10 hover:border-white/50;
   }
   
+  /* Outline Button */
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 
+           bg-transparent border-2 border-primary text-primary rounded-brand 
+           font-semibold text-base transition-all duration-300 
+           hover:bg-primary hover:text-white;
+  }
+  
+  /* Status Badges - Traffic Light System */
+  .badge-valid {
+    @apply inline-flex items-center gap-1 px-3 py-1 
+           bg-success-light text-success-dark border border-success 
+           rounded-badge text-micro font-semibold;
+  }
+  
+  .badge-warning {
+    @apply inline-flex items-center gap-1 px-3 py-1 
+           bg-warning-light text-warning-dark border border-warning 
+           rounded-badge text-micro font-semibold;
+  }
+  
+  .badge-danger {
+    @apply inline-flex items-center gap-1 px-3 py-1 
+           bg-danger-light text-danger-dark border border-danger 
+           rounded-badge text-micro font-semibold;
+  }
+  
+  /* Status Cards - Traffic Light Dashboard */
+  .status-card-valid {
+    @apply bg-success-veryLight border-l-4 border-success rounded-card p-6 
+           cursor-pointer transition-all duration-200
+           hover:shadow-status-valid hover:-translate-y-1;
+  }
+  
+  .status-card-warning {
+    @apply bg-warning-veryLight border-l-4 border-warning rounded-card p-6 
+           cursor-pointer transition-all duration-200
+           hover:shadow-status-warning hover:-translate-y-1;
+  }
+  
+  .status-card-danger {
+    @apply bg-danger-veryLight border-l-4 border-danger rounded-card p-6 
+           cursor-pointer transition-all duration-200
+           hover:shadow-status-danger hover:-translate-y-1;
+  }
+  
+  /* Card Component */
+  .card {
+    @apply bg-white border border-slate-200 rounded-card shadow-card 
+           transition-shadow duration-200 hover:shadow-card-hover;
+  }
+  
+  /* Section Container */
   .section {
     @apply py-24 md:py-32;
   }
@@ -35,22 +190,41 @@
   .container-lg {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
+  
+  /* Section Header Pattern */
+  .section-header {
+    @apply text-center max-w-3xl mx-auto mb-16;
+  }
+  
+  .section-title {
+    @apply text-h2 md:text-heading text-slate-900 mb-4;
+  }
+  
+  .section-subtitle {
+    @apply text-body-lg text-text-tertiary;
+  }
 }
 
-/* Custom Scrollbar */
+/* Custom Scrollbar - Brand Colors */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: var(--color-slate-100);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: var(--color-slate-400);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: var(--color-primary);
+}
+
+/* Selection Color */
+::selection {
+  background: rgba(0, 102, 255, 0.2);
+  color: var(--color-slate-900);
 }

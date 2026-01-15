@@ -50,14 +50,15 @@ export function Pricing() {
   ]
 
   return (
-    <section id="pricing" className="section bg-gradient-to-br from-surface-light to-white">
+    <section id="pricing" className="section bg-white">
       <div className="container-lg">
         <SectionHeading 
           title={t('title')}
+          badge="Pricing"
         />
         
         {/* Pricing Cards */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        <div className="grid md:grid-cols-3 gap-6 mb-16">
           {tiers.map((tier, i) => (
             <motion.div
               key={tier.name}
@@ -65,37 +66,40 @@ export function Pricing() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              whileHover={{ y: -8 }}
               className={cn(
-                'relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all border-2',
-                tier.highlighted ? 'border-primary' : 'border-transparent'
+                'relative bg-white rounded-card p-8 transition-all duration-300 hover:-translate-y-2',
+                tier.highlighted 
+                  ? 'border-2 border-primary shadow-xl ring-1 ring-primary/20' 
+                  : 'border border-slate-200 shadow-card hover:shadow-card-hover hover:border-primary/50'
               )}
             >
               {tier.badge && (
-                <div className="absolute -top-3 right-6 bg-primary text-white px-4 py-1 rounded-full text-sm font-semibold">
+                <div className="absolute -top-3 right-6 bg-primary text-white px-4 py-1 rounded-full text-sm font-semibold shadow-button">
                   {tier.badge}
                 </div>
               )}
               
-              <h3 className="text-xl font-bold text-text-dark mb-2">{tier.name}</h3>
+              <h3 className="text-h4 text-slate-900 mb-2">{tier.name}</h3>
               <div className="flex items-baseline mb-2">
-                <span className="text-4xl font-bold text-text-dark">{tier.price}</span>
-                <span className="text-text-medium ml-1">{tier.period}</span>
+                <span className="text-4xl font-bold text-primary">{tier.price}</span>
+                <span className="text-slate-500 ml-1">{tier.period}</span>
               </div>
-              <p className="text-sm text-text-medium mb-6">{tier.subtext}</p>
+              <p className="text-sm text-slate-500 mb-6">{tier.subtext}</p>
               
               <ul className="space-y-3 mb-8">
                 {tier.features.map((feature: string) => (
-                  <li key={feature} className="flex items-center gap-2 text-text-medium">
-                    <Check className="w-5 h-5 text-success flex-shrink-0" />
-                    {feature}
+                  <li key={feature} className="flex items-start gap-3 text-slate-600">
+                    <div className="w-5 h-5 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Check className="w-3 h-3 text-emerald-600" />
+                    </div>
+                    <span className="text-sm">{feature}</span>
                   </li>
                 ))}
               </ul>
               
               <Button 
                 href="#contact" 
-                variant={tier.highlighted ? 'primary' : 'ghost'}
+                variant={tier.highlighted ? 'primary' : 'outline'}
                 className="w-full"
               >
                 {tier.cta}
@@ -109,15 +113,15 @@ export function Pricing() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-white rounded-2xl p-8 shadow-xl max-w-4xl mx-auto"
+          className="bg-surface-light rounded-card p-8 border border-slate-200 max-w-4xl mx-auto"
         >
-          <h3 className="text-2xl font-bold text-text-dark mb-6 text-center">
+          <h3 className="text-h3 text-slate-900 mb-6 text-center">
             {t('calculator.title')}
           </h3>
           
           <div className="grid md:grid-cols-2 gap-8 mb-8">
             <div>
-              <label className="block text-sm font-semibold text-text-dark mb-2">
+              <label className="block text-sm font-semibold text-slate-900 mb-3">
                 {t('calculator.employees', { count: employees })}
               </label>
               <input
@@ -126,11 +130,11 @@ export function Pricing() {
                 max="1000"
                 value={employees}
                 onChange={(e) => setEmployees(Number(e.target.value))}
-                className="w-full accent-primary"
+                className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-primary"
               />
             </div>
             <div>
-              <label className="block text-sm font-semibold text-text-dark mb-2">
+              <label className="block text-sm font-semibold text-slate-900 mb-3">
                 {t('calculator.hours', { count: hours })}
               </label>
               <input
@@ -139,29 +143,29 @@ export function Pricing() {
                 max="40"
                 value={hours}
                 onChange={(e) => setHours(Number(e.target.value))}
-                className="w-full accent-primary"
+                className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-primary"
               />
             </div>
           </div>
           
-          <div className="grid grid-cols-3 gap-6 pt-6 border-t border-gray-200">
+          <div className="grid grid-cols-3 gap-6 pt-6 border-t border-slate-200">
             <div className="text-center">
-              <div className="text-3xl font-bold text-success mb-1">
+              <div className="text-3xl font-bold text-emerald-600 mb-1">
                 ${annualSavings.toLocaleString()}
               </div>
-              <div className="text-sm text-text-medium">{t('calculator.annualSavings')}</div>
+              <div className="text-sm text-slate-500">{t('calculator.annualSavings')}</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-1">
+              <div className="text-3xl font-bold text-blue-600 mb-1">
                 {timeRecovered.toLocaleString()}
               </div>
-              <div className="text-sm text-text-medium">{t('calculator.timeRecovered')}</div>
+              <div className="text-sm text-slate-500">{t('calculator.timeRecovered')}</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-warning mb-1">
+              <div className="text-3xl font-bold text-amber-600 mb-1">
                 {roiMonths}
               </div>
-              <div className="text-sm text-text-medium">{t('calculator.roi')}</div>
+              <div className="text-sm text-slate-500">{t('calculator.roi')}</div>
             </div>
           </div>
         </motion.div>

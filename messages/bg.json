@@ -1,7 +1,46 @@
 {
   "nav": {
-    "features": "Функции",
-    "industries": "Индустрии",
+    "solutionsLabel": "Решения",
+    "industriesLabel": "Индустрии",
+    "productLabel": "Продукт",
+    "solutions": {
+      "trainingCompliance": "Обучение за съответствие",
+      "trainingComplianceDesc": "Автоматизирано проследяване и управление на изтичане",
+      "proficiencyChecks": "Проверки на компетентност",
+      "proficiencyChecksDesc": "Управление на LPC/OPC и работни процеси за повторно изпълнение",
+      "auditReporting": "Одитен отчет",
+      "auditReportingDesc": "Отчети за съответствие с едно кликване и одитни следи",
+      "digitalSignatures": "Цифрови подписи",
+      "digitalSignaturesDesc": "Юридически обвързващи подписи на платно"
+    },
+    "industries": {
+      "airlines": "Авиокомпании",
+      "airlinesDesc": "Съответствие на пилоти и кабинен екипаж",
+      "flightSchools": "Летни училища",
+      "flightSchoolsDesc": "Напредък на студенти и управление на инструктори",
+      "mros": "MRO",
+      "mrosDesc": "Проследяване на сертификация на техници",
+      "groundHandling": "Наземно обслужване",
+      "groundHandlingDesc": "Съответствие на обучение на наземен персонал",
+      "maritime": "Морски транспорт",
+      "maritimeDesc": "Съответствие със STCW и обучение на екипаж",
+      "healthcare": "Здравеопазване",
+      "healthcareDesc": "Обучение и сертификация на медицински персонал"
+    },
+    "product": {
+      "trafficLight": "Табло със светофари",
+      "trafficLightDesc": "Визуален статус на съответствие на пръв поглед",
+      "automatedTracking": "Автоматизирано проследяване",
+      "automatedTrackingDesc": "Нула ръчни актуализации на електронни таблици",
+      "paperlessWorkflow": "Без хартия работен процес",
+      "paperlessWorkflowDesc": "Цифрови подписи и управление на документи",
+      "lpcOpc": "Управление на LPC/OPC",
+      "lpcOpcDesc": "Автоматизирани работни процеси за повторно изпълнение и откриване на конфликти на оценяващи",
+      "complianceReports": "Отчети за съответствие",
+      "complianceReportsDesc": "PDF досиета, съвместими с EASA",
+      "enterpriseSecurity": "Корпоративна сигурност",
+      "enterpriseSecurityDesc": "Сигурност на ниво ред и съвместимост с GDPR"
+    },
     "pricing": "Цени",
     "faq": "ЧЗВ",
     "bookDemo": "Резервирай демо"

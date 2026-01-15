@@ -1,5 +1,3 @@
-import { Navigation } from '@/components/layout/Navigation'
-import { Footer } from '@/components/layout/Footer'
 import { Hero } from '@/components/sections/Hero'
 import { SocialProof } from '@/components/sections/SocialProof'
 import { ProblemStatement } from '@/components/sections/ProblemStatement'
@@ -17,7 +15,6 @@ import { FinalCTA } from '@/components/sections/FinalCTA'
 export default function Home() {
   return (
     <main>
-      <Navigation />
       <Hero />
       <SocialProof />
       <ProblemStatement />
@@ -31,7 +28,6 @@ export default function Home() {
       <Testimonials />
       <FAQ />
       <FinalCTA />
-      <Footer />
     </main>
   )
 }
