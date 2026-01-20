@@ -149,7 +149,7 @@ export function Navigation() {
             'text-xl font-bold tracking-tight transition-colors',
             scrolled ? 'text-slate-900' : 'text-white'
           )}>
-            TCMS
+            CertifyCloud
           </span>
         </Link>
 

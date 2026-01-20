@@ -7,8 +7,8 @@ import type { Metadata } from 'next'
 import { PageLayout } from '@/components/layout/PageLayout'
 
 export const metadata: Metadata = {
-  title: 'TCMS - Aviation Training Compliance Software | EASA Compliant',
-  description: 'Automate aviation training compliance with TCMS. Replace spreadsheets with real-time tracking, digital signatures, and audit-ready reports. EASA & FAA compliant.',
+  title: 'CertifyCloud - Aviation Training Compliance Software | EASA Compliant',
+  description: 'Automate aviation training compliance with CertifyCloud. Replace spreadsheets with real-time tracking, digital signatures, and audit-ready reports. EASA & FAA compliant.',
 }
 
 export function generateStaticParams() {

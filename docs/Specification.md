@@ -1,8 +1,8 @@
-Based on the comprehensive TCMS documentation and current best practices for high-converting B2B SaaS landing pages, I'll create a detailed specification for a conversion-focused landing page.[1][2][3][4][5]
+Based on the comprehensive CertifyCloud documentation and current best practices for high-converting B2B SaaS landing pages, I'll create a detailed specification for a conversion-focused landing page.[1][2][3][4][5]
 
 ***
 
-# **TCMS Landing Page Specification**
+# **CertifyCloud Landing Page Specification**
 ## **High-Converting Aviation Compliance Software Landing Page**
 
 ***
@@ -68,7 +68,7 @@ Replace fragmented spreadsheets with automated aviation training compliance that
 
 **Subheadline:**
 ```
-"TCMS automates aviation training compliance for airlines, flight schools, 
+"CertifyCloud automates aviation training compliance for airlines, flight schools, 
 and MROs. Stay EASA & FAA compliant with zero manual tracking."
 ```
 
@@ -240,7 +240,7 @@ and MROs. Stay EASA & FAA compliant with zero manual tracking."
 
 ### Content
 **Large Screenshot/Video:**
-- Actual TCMS dashboard showing traffic light competence matrix
+- Actual CertifyCloud dashboard showing traffic light competence matrix
 - Interactive hotspots revealing feature callouts:
   1. "Real-time status calculation"
   2. "Click-through filtering"
@@ -273,7 +273,7 @@ managers prioritize renewals and prevent expiries."
 
 ### Headline (H2)
 ```
-"Why Aviation Organizations Choose TCMS"
+"Why Aviation Organizations Choose CertifyCloud"
 ```
 
 ### 3-Column Benefits (Icon + Stats + Description)
@@ -356,7 +356,7 @@ Airlines | Flight Schools | MROs | Ground Handling | Maritime | Healthcare
 
 ### Headline (H2)
 ```
-"See TCMS in Action (2:30)"
+"See CertifyCloud in Action (2:30)"
 ```
 
 ### Video Content Outline
@@ -487,7 +487,7 @@ Airlines | Flight Schools | MROs | Ground Handling | Maritime | Healthcare
 
 **Testimonial 1:**
 ```
-"TCMS reduced our training admin workload by 80%. We went from 
+"CertifyCloud reduced our training admin workload by 80%. We went from 
 weekly spreadsheet updates to real-time compliance visibility. 
 The ROI was immediate."
 
@@ -553,9 +553,9 @@ We provide data migration assistance, user training, and dedicated
 onboarding support.
 ```
 
-**Q2: Is TCMS EASA compliant?**
+**Q2: Is CertifyCloud EASA compliant?**
 ```
-Yes, TCMS is built to comply with EASA ADR.OR.D.017 and FAA Part 121/135 
+Yes, CertifyCloud is built to comply with EASA ADR.OR.D.017 and FAA Part 121/135 
 requirements. All audit trails, digital signatures, and records meet 
 regulatory standards. [file:5]
 ```
@@ -569,27 +569,27 @@ audit trails.
 
 **Q4: How secure is our data?**
 ```
-TCMS uses enterprise-grade security with row-level isolation, encrypted 
+CertifyCloud uses enterprise-grade security with row-level isolation, encrypted 
 storage, and GDPR compliance. Each organization's data is completely 
 segregated. [file:3]
 ```
 
 **Q5: What happens if a crew member fails a proficiency check?**
 ```
-TCMS automatically triggers retake workflows, schedules remedial training, 
+CertifyCloud automatically triggers retake workflows, schedules remedial training, 
 and enforces the maximum 3-attempt rule. Assessors receive automated 
 notifications. [file:3]
 ```
 
 **Q6: Do you offer mobile access?**
 ```
-Yes, TCMS is fully responsive and works on tablets/smartphones. Instructors 
+Yes, CertifyCloud is fully responsive and works on tablets/smartphones. Instructors 
 commonly use iPads for digital signatures during training sessions. [file:5]
 ```
 
 **Q7: Can we customize grading schemas?**
 ```
-Yes, TCMS supports standard 1-5 grading, AQP, EBT, and custom JSONB schemas. 
+Yes, CertifyCloud supports standard 1-5 grading, AQP, EBT, and custom JSONB schemas. 
 We can configure assessment criteria to match your training standards. [file:3]
 ```
 
@@ -622,7 +622,7 @@ priority support and dedicated account management.
 
 ### Subheadline
 ```
-"Join aviation organizations using TCMS to automate training compliance 
+"Join aviation organizations using CertifyCloud to automate training compliance 
 and eliminate manual tracking."
 ```
 
@@ -658,7 +658,7 @@ and eliminate manual tracking."
 **Column 1: Company**
 - Logo (white version)
 - Tagline: "Aviation Training Compliance, Automated"
-- Copyright: "© 2026 TCMS. All rights reserved."
+- Copyright: "© 2026 CertifyCloud. All rights reserved."
 
 **Column 2: Quick Links**
 - Product
@@ -702,8 +702,8 @@ and eliminate manual tracking."
 - **CRM Integration:** HubSpot/Salesforce form submission
 
 ### SEO Optimization
-- **Title Tag:** "Aviation Training Compliance Software | TCMS - EASA Compliant"
-- **Meta Description:** "Automate aviation training compliance with TCMS. Replace spreadsheets with real-time tracking, digital signatures, and audit-ready reports. EASA & FAA compliant."
+- **Title Tag:** "Aviation Training Compliance Software | CertifyCloud - EASA Compliant"
+- **Meta Description:** "Automate aviation training compliance with CertifyCloud. Replace spreadsheets with real-time tracking, digital signatures, and audit-ready reports. EASA & FAA compliant."
 - **Schema Markup:** SoftwareApplication, Organization, FAQPage
 - **Open Graph:** Custom image for social sharing
 - **Keywords:** Aviation compliance software, EASA training management, crew qualification tracking
@@ -788,7 +788,7 @@ Secondary (Ghost):
    - B: "Automate Aviation Compliance & Pass Every Audit"
 2. **CTA button text:**
    - A: "Book Your Demo"
-   - B: "See TCMS in Action"
+   - B: "See CertifyCloud in Action"
 3. **Hero visual:**
    - A: Dashboard screenshot
    - B: Video preview thumbnail

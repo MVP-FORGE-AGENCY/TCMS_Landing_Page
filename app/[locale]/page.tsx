@@ -1,33 +1,33 @@
-import { Hero } from '@/components/sections/Hero'
-import { SocialProof } from '@/components/sections/SocialProof'
+import { HeroEnhanced } from '@/components/sections/HeroEnhanced'
+import { LogoCarousel } from '@/components/sections/LogoCarousel'
 import { ProblemStatement } from '@/components/sections/ProblemStatement'
-import { Features } from '@/components/sections/Features'
+import { BentoFeatures } from '@/components/sections/BentoFeatures'
+import { Comparison } from '@/components/sections/Comparison'
 import { Dashboard } from '@/components/sections/Dashboard'
 import { Benefits } from '@/components/sections/Benefits'
 import { Industries } from '@/components/sections/Industries'
-import { VideoDemo } from '@/components/sections/VideoDemo'
 import { Compliance } from '@/components/sections/Compliance'
 import { Pricing } from '@/components/sections/Pricing'
-import { Testimonials } from '@/components/sections/Testimonials'
+import { TestimonialsEnhanced } from '@/components/sections/TestimonialsEnhanced'
 import { FAQ } from '@/components/sections/FAQ'
-import { FinalCTA } from '@/components/sections/FinalCTA'
+import { FinalCTAEnhanced } from '@/components/sections/FinalCTAEnhanced'
 
 export default function Home() {
   return (
     <main>
-      <Hero />
-      <SocialProof />
+      <HeroEnhanced />
+      <LogoCarousel />
       <ProblemStatement />
-      <Features />
+      <BentoFeatures />
+      <Comparison />
       <Dashboard />
       <Benefits />
       <Industries />
-      <VideoDemo />
       <Compliance />
       <Pricing />
-      <Testimonials />
+      <TestimonialsEnhanced />
       <FAQ />
-      <FinalCTA />
+      <FinalCTAEnhanced />
     </main>
   )
 }

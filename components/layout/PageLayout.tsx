@@ -1,14 +1,19 @@
 'use client'
 
 import { Navigation } from './Navigation'
-import { Footer } from './Footer'
+import { FooterEnhanced } from './FooterEnhanced'
+import { FloatingCTA, BackToTop, LiveChat, ScrollProgress } from '@/components/ui/FloatingElements'
 
 export function PageLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
+      <ScrollProgress />
       <Navigation />
       {children}
-      <Footer />
+      <FooterEnhanced />
+      <FloatingCTA />
+      <BackToTop />
+      <LiveChat />
     </>
   )
 }

@@ -47,7 +47,7 @@
   },
   "hero": {
     "title": "Stop Tracking Training Compliance in Spreadsheets",
-    "subtitle": "TCMS automates aviation training compliance for airlines, flight schools, and MROs. Stay EASA & FAA compliant with zero manual tracking.",
+    "subtitle": "CertifyCloud automates aviation training compliance for airlines, flight schools, and MROs. Stay EASA & FAA compliant with zero manual tracking.",
     "ctaPrimary": "Book Your Demo",
     "ctaSecondary": "See How It Works",
     "trust1": "EASA ADR.OR.D.017 Compliant",
@@ -123,7 +123,7 @@
     "digitalSignature": "Digital Signature"
   },
   "benefits": {
-    "title": "Why Aviation Organizations Choose TCMS",
+    "title": "Why Aviation Organizations Choose CertifyCloud",
     "compliance": {
       "stat": "100%",
       "statLabel": "Compliance Rate",
@@ -218,7 +218,7 @@
     "featuredCapability": "Featured Capability"
   },
   "video": {
-    "title": "See TCMS in Action (2:30)",
+    "title": "See CertifyCloud in Action (2:30)",
     "ready": "Ready to streamline your compliance?",
     "cta": "Schedule Implementation Call"
   },
@@ -235,46 +235,71 @@
   },
   "pricing": {
     "title": "Transparent Pricing That Scales With You",
-    "professional": {
-      "name": "Professional",
-      "price": "$XXX",
+    "subtitle": "All plans include a 14-day free trial. No credit card required.",
+    "annualDiscount": "Save 20% with annual billing",
+    "starter": {
+      "name": "Starter",
+      "price": "$299",
       "period": "/month",
-      "subtext": "For teams up to 100 employees",
-      "badge": "Most Popular",
+      "subtext": "For small operators up to 50 personnel",
       "features": [
-        "All core features",
-        "2 concurrent instructors",
+        "Up to 50 tracked personnel",
+        "2 admin users",
+        "Traffic light dashboard",
+        "Automated expiry tracking",
+        "Digital signatures",
         "Email support",
         "5GB storage"
       ],
-      "cta": "Start 14-Day Trial"
+      "cta": "Start Free Trial"
+    },
+    "professional": {
+      "name": "Professional",
+      "price": "$599",
+      "period": "/month",
+      "subtext": "For growing organizations up to 150 personnel",
+      "badge": "Most Popular",
+      "features": [
+        "Up to 150 tracked personnel",
+        "5 admin users",
+        "LPC/OPC management",
+        "Custom grading schemas",
+        "Priority email support",
+        "25GB storage",
+        "API access"
+      ],
+      "cta": "Start Free Trial"
     },
     "enterprise": {
       "name": "Enterprise",
-      "price": "Custom Pricing",
-      "period": "",
-      "subtext": "For organizations 100-500 employees",
+      "price": "$1,199",
+      "period": "/month",
+      "subtext": "For established operators up to 500 personnel",
       "badge": "Best Value",
       "features": [
-        "Everything in Professional",
-        "Unlimited instructors",
-        "Priority support",
-        "50GB storage",
-        "Custom branding"
+        "Up to 500 tracked personnel",
+        "Unlimited admin users",
+        "Multi-base support",
+        "SSO/SAML integration",
+        "Dedicated success manager",
+        "100GB storage",
+        "Phone support"
       ],
       "cta": "Contact Sales"
     },
     "fleet": {
       "name": "Fleet",
-      "price": "Custom Pricing",
+      "price": "Custom",
       "period": "",
-      "subtext": "For 500+ employees or multi-base operations",
+      "subtext": "For large-scale operations with 500+ personnel",
       "features": [
-        "Everything in Enterprise",
-        "Dedicated account manager",
-        "Custom integrations",
+        "Unlimited personnel",
+        "Dedicated infrastructure",
+        "99.9% SLA guarantee",
         "Unlimited storage",
-        "SLA guarantee"
+        "On-site training",
+        "Custom integrations",
+        "Regulatory consultation"
       ],
       "cta": "Book Consultation"
     },
@@ -290,7 +315,7 @@
   "testimonials": {
     "title": "Trusted by Aviation Leaders",
     "testimonial1": {
-      "quote": "TCMS reduced our training admin workload by 80%. We went from weekly spreadsheet updates to real-time compliance visibility. The ROI was immediate.",
+      "quote": "CertifyCloud reduced our training admin workload by 80%. We went from weekly spreadsheet updates to real-time compliance visibility. The ROI was immediate.",
       "author": "John Mitchell",
       "role": "Training Manager",
       "company": "Regional Airline (150 pilots)",
@@ -319,8 +344,8 @@
       "answer": "Most organizations are fully operational within 7-10 business days. We provide data migration assistance, user training, and dedicated onboarding support."
     },
     "q2": {
-      "question": "Is TCMS EASA compliant?",
-      "answer": "Yes, TCMS is built to comply with EASA ADR.OR.D.017 and FAA Part 121/135 requirements. All audit trails, digital signatures, and records meet regulatory standards."
+      "question": "Is CertifyCloud EASA compliant?",
+      "answer": "Yes, CertifyCloud is built to comply with EASA ADR.OR.D.017 and FAA Part 121/135 requirements. All audit trails, digital signatures, and records meet regulatory standards."
     },
     "q3": {
       "question": "Can we migrate existing data from spreadsheets?",
@@ -328,19 +353,19 @@
     },
     "q4": {
       "question": "How secure is our data?",
-      "answer": "TCMS uses enterprise-grade security with row-level isolation, encrypted storage, and GDPR compliance. Each organization's data is completely segregated."
+      "answer": "CertifyCloud uses enterprise-grade security with row-level isolation, encrypted storage, and GDPR compliance. Each organization's data is completely segregated."
     },
     "q5": {
       "question": "What happens if a crew member fails a proficiency check?",
-      "answer": "TCMS automatically triggers retake workflows, schedules remedial training, and enforces the maximum 3-attempt rule. Assessors receive automated notifications."
+      "answer": "CertifyCloud automatically triggers retake workflows, schedules remedial training, and enforces the maximum 3-attempt rule. Assessors receive automated notifications."
     },
     "q6": {
       "question": "Do you offer mobile access?",
-      "answer": "Yes, TCMS is fully responsive and works on tablets/smartphones. Instructors commonly use iPads for digital signatures during training sessions."
+      "answer": "Yes, CertifyCloud is fully responsive and works on tablets/smartphones. Instructors commonly use iPads for digital signatures during training sessions."
     },
     "q7": {
       "question": "Can we customize grading schemas?",
-      "answer": "Yes, TCMS supports standard 1-5 grading, AQP, EBT, and custom schemas. We can configure assessment criteria to match your training standards."
+      "answer": "Yes, CertifyCloud supports standard 1-5 grading, AQP, EBT, and custom schemas. We can configure assessment criteria to match your training standards."
     },
     "q8": {
       "question": "What support is included?",
@@ -349,7 +374,7 @@
   },
   "cta": {
     "title": "Stop Risking Compliance Violations",
-    "subtitle": "Join aviation organizations using TCMS to automate training compliance and eliminate manual tracking.",
+    "subtitle": "Join aviation organizations using CertifyCloud to automate training compliance and eliminate manual tracking.",
     "primary": "Book Your Demo",
     "secondary": "Start 14-Day Free Trial",
     "trust1": "Setup in 7 days",
@@ -358,8 +383,8 @@
     "trust4": "Cancel anytime"
   },
   "footer": {
-    "tagline": "Aviation Training Compliance, Automated",
-    "copyright": "© 2026 TCMS. All rights reserved.",
+    "tagline": "Compliance Without Complexity",
+    "copyright": "© 2026 CertifyCloud. All rights reserved.",
     "quickLinks": "Quick Links",
     "product": "Product",
     "pricing": "Pricing",

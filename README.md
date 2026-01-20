@@ -1,6 +1,6 @@
-# TCMS Landing Page
+# CertifyCloud Landing Page
 
-A stunning, conversion-focused landing page for TCMS (Training & Competence Management System) built with Next.js 14, TypeScript, and Framer Motion.
+A stunning, conversion-focused landing page for CertifyCloud (Training & Competence Management System) built with Next.js 14, TypeScript, and Framer Motion.
 
 ## Features
 
@@ -39,7 +39,7 @@ Open [http://localhost:3000](http://localhost:3000) to view the landing page.
 ## Project Structure
 
 ```
-TCMS_Landing_Page/
+CertifyCloud_Landing_Page/
 ├── app/
 │   ├── [locale]/          # Locale-specific pages
 │   ├── layout.tsx         # Root layout
@@ -60,7 +60,7 @@ TCMS_Landing_Page/
 1. **Hero**: Eye-catching hero section with animated background and CTAs
 2. **Features**: Showcase of key features with icons and descriptions
 3. **Benefits**: Benefits for different user types (organizations, training depts, employees)
-4. **Industries**: Industries that TCMS serves
+4. **Industries**: Industries that CertifyCloud serves
 5. **CTA**: Conversion-focused call-to-action section
 6. **Footer**: Footer with links and social media
 

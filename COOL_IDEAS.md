@@ -1,7 +1,7 @@
-# 5 Cool Ideas for TCMS Landing Page 🚀
+# 5 Cool Ideas for CertifyCloud Landing Page 🚀
 
 ## 1. 3D Card Flip Animation Showcase
-**What**: Interactive 3D cards that flip to reveal "before TCMS" vs "after TCMS" comparisons
+**What**: Interactive 3D cards that flip to reveal "before CertifyCloud" vs "after CertifyCloud" comparisons
 **Why**: Visually dramatic way to show transformation
 **Features**:
 - Before side: messy spreadsheets, paper chaos
@@ -72,12 +72,12 @@
 - Works with predefined commands
 
 ### 8. Comparison Matrix Battle
-**What**: Animated comparison table (TCMS vs Traditional methods)
+**What**: Animated comparison table (CertifyCloud vs Traditional methods)
 **Features**:
 - Vs battle theme
 - Checkmarks animate in sequence
 - Traditional side shows X marks
-- Victory animation for TCMS
+- Victory animation for CertifyCloud
 
 ### 9. Scrollytelling Experience
 **What**: Full-screen sections that transform as you scroll

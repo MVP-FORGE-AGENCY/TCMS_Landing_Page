@@ -19,6 +19,15 @@ export function Pricing() {
 
   const tiers = [
     {
+      name: t('starter.name'),
+      price: t('starter.price'),
+      period: t('starter.period'),
+      subtext: t('starter.subtext'),
+      features: t.raw('starter.features'),
+      cta: t('starter.cta'),
+      highlighted: false,
+    },
+    {
       name: t('professional.name'),
       price: t('professional.price'),
       period: t('professional.period'),
@@ -54,11 +63,20 @@ export function Pricing() {
       <div className="container-lg">
         <SectionHeading 
           title={t('title')}
+          subtitle={t('subtitle')}
           badge="Pricing"
         />
         
+        {/* Annual Discount Banner */}
+        <div className="text-center mb-8">
+          <span className="inline-flex items-center gap-2 bg-emerald-100 text-emerald-800 px-4 py-2 rounded-full text-sm font-semibold">
+            <Check className="w-4 h-4" />
+            {t('annualDiscount')}
+          </span>
+        </div>
+        
         {/* Pricing Cards */}
-        <div className="grid md:grid-cols-3 gap-6 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {tiers.map((tier, i) => (
             <motion.div
               key={tier.name}

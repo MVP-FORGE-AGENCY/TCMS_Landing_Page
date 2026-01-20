@@ -145,7 +145,7 @@ export default function AirlinesPage() {
         <div className="container-lg text-center">
           <h2 className="text-h2 md:text-heading mb-4">Ready to Streamline Airline Compliance?</h2>
           <p className="text-body-lg text-white/90 mb-8 max-w-2xl mx-auto">
-            Join airlines using TCMS to automate training compliance and ensure fleet readiness.
+            Join airlines using CertifyCloud to automate training compliance and ensure fleet readiness.
           </p>
           <Button href="#contact" variant="ghost" size="large">
             Book Airline Demo

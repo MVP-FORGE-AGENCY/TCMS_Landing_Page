@@ -116,7 +116,7 @@ export function Footer() {
               <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center group-hover:bg-primary/90 transition-colors">
                 <Plane className="w-5 h-5 text-white" />
               </div>
-              <span className="text-xl font-bold tracking-tight group-hover:text-primary transition-colors">TCMS</span>
+              <span className="text-xl font-bold tracking-tight group-hover:text-primary transition-colors">CertifyCloud</span>
             </Link>
             <p className="text-slate-400 text-sm mb-4 leading-relaxed">
               {t('tagline')}
