@@ -64,7 +64,7 @@ export function Comparison() {
           </span>
           
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-            Spreadsheets weren't built for{' '}
+            Spreadsheets weren&apos;t built for{' '}
             <span className="text-rose-500 line-through decoration-4">compliance</span>
           </h2>
           <p className="text-xl text-slate-600">

@@ -122,7 +122,7 @@ export function FooterEnhanced() {
                     <Check className="w-6 h-6 text-emerald-400" />
                   </div>
                   <div>
-                    <div className="font-semibold text-white">You're subscribed!</div>
+                    <div className="font-semibold text-white">You&apos;re subscribed!</div>
                     <div className="text-sm text-white/60">Check your inbox for a welcome email.</div>
                   </div>
                 </div>

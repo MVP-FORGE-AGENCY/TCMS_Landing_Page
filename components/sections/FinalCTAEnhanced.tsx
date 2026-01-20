@@ -151,7 +151,7 @@ export function FinalCTAEnhanced() {
                   <span key={i} className="text-amber-400">★</span>
                 ))}
               </div>
-              <p className="text-sm text-slate-700">"Best compliance tool we've used"</p>
+              <p className="text-sm text-slate-700">&quot;Best compliance tool we&apos;ve used&quot;</p>
               <p className="text-xs text-slate-500 mt-2">— Training Manager</p>
             </motion.div>
             

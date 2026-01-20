@@ -169,7 +169,7 @@ export function TestimonialsEnhanced() {
                   
                   {/* Quote */}
                   <blockquote className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8">
-                    "{current.quote}"
+                    &quot;{current.quote}&quot;
                   </blockquote>
                   
                   {/* Author */}

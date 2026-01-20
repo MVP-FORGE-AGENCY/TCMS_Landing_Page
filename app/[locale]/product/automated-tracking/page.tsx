@@ -62,7 +62,7 @@ export default function AutomatedTrackingPage() {
                   <div>
                     <h3 className="text-h5 text-slate-900 mb-2">Auto-Calculation</h3>
                     <p className="text-body text-slate-600">
-                      Validity periods set once. System automatically calculates "Valid Until" dates 
+                      Validity periods set once. System automatically calculates &quot;Valid Until&quot; dates 
                       based on completion dates.
                     </p>
                   </div>

@@ -361,7 +361,7 @@ export function ScheduleDemoModal({ isOpen, onClose }: ScheduleDemoModalProps) {
                     </div>
                     <h3 className="text-2xl font-bold text-slate-900 mb-2">Demo Scheduled!</h3>
                     <p className="text-slate-600 mb-6">
-                      We've sent a calendar invite to {formData.email}
+                      We&apos;ve sent a calendar invite to {formData.email}
                     </p>
                     <div className="bg-slate-50 rounded-xl p-4 max-w-sm mx-auto text-left">
                       <div className="flex items-center gap-3 mb-3">

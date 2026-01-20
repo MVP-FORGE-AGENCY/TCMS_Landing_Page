@@ -39,7 +39,7 @@ export default function LPCOPCManagementPage() {
               <h3 className="text-h5 text-red-800">Conflict Detected</h3>
             </div>
             <p className="text-body text-red-700">
-              Cannot schedule assessor "John Smith" to check themselves or their direct reports. 
+              Cannot schedule assessor &quot;John Smith&quot; to check themselves or their direct reports. 
               Please select a different assessor.
             </p>
           </div>

@@ -82,7 +82,7 @@ export default function TrafficLightDashboardPage() {
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
                   className={`bg-${item.color}-50 border-l-4 border-${item.color}-500 rounded-card p-6 cursor-pointer hover:shadow-lg transition-all`}
-                  onClick={() => setSelectedFilter(item.status)}
+                  onClick={() => setSelectedFilter(item.status as 'valid' | 'expiring' | 'expired')}
                 >
                   <div className={`text-4xl font-bold text-${item.color}-600 mb-2`}>
                     {item.count}
