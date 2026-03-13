@@ -49,8 +49,7 @@ export function ProblemStatement() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                whileHover={{ y: -8 }}
-                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all"
+                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
               >
                 <div className={`w-16 h-16 ${problem.bg} rounded-xl flex items-center justify-center mb-6`}>
                   <Icon className={`w-8 h-8 ${problem.color}`} />

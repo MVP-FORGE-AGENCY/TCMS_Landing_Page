@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, Shield, Bell, AlertTriangle } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import { Button } from '@/components/ui/Button'
 
@@ -24,7 +24,7 @@ export function Dashboard() {
             <p className="text-body-lg text-white/80 mb-8 leading-relaxed">
               {t('description')}
             </p>
-            <Button href="#demo" variant="primary" icon={<ArrowRight className="w-5 h-5" />}>
+            <Button href="#demo" variant="primary" icon={<ArrowRight className="w-5 h-5" />} disabled>
               {t('cta')}
             </Button>
           </motion.div>
@@ -38,36 +38,76 @@ export function Dashboard() {
             style={{ perspective: '1000px' }}
           >
             <div className="bg-slate-800 rounded-2xl p-6 shadow-2xl">
-              <div className="bg-gradient-to-br from-slate-700 to-slate-800 rounded-xl p-8">
-                <div className="text-center text-white mb-8">
-                  <h3 className="text-2xl font-bold mb-2">Fleet Readiness</h3>
-                  <p className="text-sm text-white/60">Updated in real-time</p>
+              <div className="bg-gradient-to-br from-slate-700 to-slate-800 rounded-xl p-6">
+                {/* Dashboard Header */}
+                <div className="flex items-center justify-between mb-6">
+                  <div>
+                    <h3 className="text-xl font-bold text-white mb-1">Fleet Readiness</h3>
+                    <p className="text-xs text-white/60">Updated in real-time</p>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <select className="bg-white/10 border border-white/10 rounded-md px-2 py-1 text-xs text-white/80 appearance-none cursor-pointer">
+                      <option>All Departments</option>
+                    </select>
+                  </div>
                 </div>
                 
-                <div className="flex justify-center gap-8 mb-8">
+                {/* Traffic Light Cards */}
+                <div className="flex justify-center gap-6 mb-6">
                   {[
                     { color: 'bg-success', value: '94%', label: 'Compliant' },
                     { color: 'bg-warning', value: '5%', label: 'Expiring' },
                     { color: 'bg-danger', value: '1%', label: 'Action Required' },
                   ].map((stat) => (
                     <div key={stat.label} className="text-center">
-                      <div className={`w-24 h-24 ${stat.color} rounded-2xl flex items-center justify-center mb-3 shadow-lg`}>
-                        <span className="text-2xl font-bold text-white">{stat.value}</span>
+                      <div className={`w-20 h-20 ${stat.color} rounded-2xl flex items-center justify-center mb-2 shadow-lg`}>
+                        <span className="text-xl font-bold text-white">{stat.value}</span>
                       </div>
-                      <span className="text-sm text-white/80">{stat.label}</span>
+                      <span className="text-xs text-white/80">{stat.label}</span>
                     </div>
                   ))}
                 </div>
                 
-                {/* Mini chart placeholder */}
-                <div className="flex items-end justify-center gap-1 h-16">
-                  {[40, 65, 45, 80, 55, 70, 60, 85, 75, 90, 80, 95].map((h, i) => (
-                    <div 
-                      key={i}
-                      className="w-4 bg-primary/60 rounded-t"
-                      style={{ height: `${h}%` }}
-                    />
-                  ))}
+                {/* Compliance trend chart */}
+                <div className="bg-white/5 rounded-xl p-4 border border-white/5 mb-4">
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-xs text-white/70">Compliance Trend</span>
+                    <span className="text-xs text-emerald-400">↑ 12% this month</span>
+                  </div>
+                  <div className="flex items-end justify-center gap-1 h-16">
+                    {[40, 65, 45, 80, 55, 70, 60, 85, 75, 90, 80, 95].map((h, i) => (
+                      <motion.div 
+                        key={i}
+                        initial={{ height: 0 }}
+                        whileInView={{ height: `${h}%` }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.3 + i * 0.05, duration: 0.4 }}
+                        className="w-4 bg-gradient-to-t from-primary/80 to-cyan-400/80 rounded-t"
+                      />
+                    ))}
+                  </div>
+                </div>
+
+                {/* My Actions list */}
+                <div className="bg-white/5 rounded-xl p-3 border border-white/5">
+                  <div className="text-xs font-medium text-white/70 mb-2 flex items-center gap-1.5">
+                    <Bell className="w-3 h-3" />
+                    My Actions
+                  </div>
+                  <div className="space-y-1.5">
+                    {[
+                      { icon: AlertTriangle, text: '3 OPCs expiring within 30 days', color: 'text-amber-400' },
+                      { icon: Shield, text: 'Pending protocol sign-off', color: 'text-blue-400' },
+                    ].map((action) => {
+                      const ActionIcon = action.icon
+                      return (
+                        <div key={action.text} className="flex items-center gap-2 text-xs">
+                          <ActionIcon className={`w-3 h-3 ${action.color}`} />
+                          <span className="text-white/60">{action.text}</span>
+                        </div>
+                      )
+                    })}
+                  </div>
                 </div>
               </div>
             </div>
@@ -88,9 +128,10 @@ export function Dashboard() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.7 }}
-              className="absolute -bottom-4 -left-4 bg-white rounded-lg px-3 py-2 shadow-lg border-2 border-success text-xs font-semibold"
+              className="absolute -bottom-4 -left-4 bg-white rounded-lg px-3 py-2 shadow-lg border-2 border-success text-xs font-semibold flex items-center gap-1.5"
             >
-              One-click export
+              <Shield className="w-3.5 h-3.5 text-emerald-500" />
+              Protocol Verified ✓
             </motion.div>
           </motion.div>
         </div>

@@ -11,6 +11,7 @@ interface ButtonProps {
   className?: string
   icon?: React.ReactNode
   onClick?: () => void
+  disabled?: boolean
 }
 
 export function Button({ 
@@ -20,7 +21,8 @@ export function Button({
   href,
   className,
   icon,
-  onClick
+  onClick,
+  disabled
 }: ButtonProps) {
   const baseStyles = `
     inline-flex items-center justify-center gap-2 font-semibold rounded-lg 
@@ -75,15 +77,22 @@ export function Button({
     large: 'px-8 py-4 text-lg min-h-[60px]',
   }
   
-  const Component = href ? motion.a : motion.button
+  const Component = href && !disabled ? motion.a : motion.button
   
   return (
     <Component
-      href={href}
-      onClick={onClick}
-      whileHover={{ scale: 1.02 }}
-      whileTap={{ scale: 0.98 }}
-      className={cn(baseStyles, variants[variant], sizes[size], className)}
+      href={!disabled ? href : undefined}
+      onClick={disabled ? undefined : onClick}
+      disabled={disabled}
+      whileHover={disabled ? {} : { scale: 1.02 }}
+      whileTap={disabled ? {} : { scale: 0.98 }}
+      className={cn(
+        baseStyles, 
+        variants[variant], 
+        sizes[size], 
+        disabled && 'opacity-50 cursor-not-allowed hover:transform-none hover:shadow-none pointer-events-none',
+        className
+      )}
     >
       {icon}
       {children}

@@ -52,14 +52,6 @@ export function Footer() {
       label: tNav('industries.groundHandling'), 
       href: `/${locale}/industries/ground-handling`,
     },
-    { 
-      label: tNav('industries.maritime'), 
-      href: `/${locale}/industries/maritime`,
-    },
-    { 
-      label: tNav('industries.healthcare'), 
-      href: `/${locale}/industries/healthcare`,
-    },
   ]
 
   // Product dropdown items
@@ -92,7 +84,6 @@ export function Footer() {
   
   const quickLinks = [
     { href: isHomePage ? '#features' : `/${locale}/#features`, label: t('product') },
-    { href: isHomePage ? '#pricing' : `/${locale}/#pricing`, label: t('pricing') },
     { href: isHomePage ? '#testimonials' : `/${locale}/#testimonials`, label: t('caseStudies') },
     { href: isHomePage ? '#faq' : `/${locale}/#faq`, label: t('faq') },
   ]

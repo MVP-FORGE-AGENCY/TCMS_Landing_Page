@@ -3,8 +3,8 @@
 import { useState, useEffect } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { 
-  Calendar, Play, Check, Shield, Users, Clock, 
-  ArrowRight, Sparkles, Zap, Globe, Award
+  Calendar, Play, Check, Shield,
+  ArrowRight, Sparkles, Zap
 } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import { Button } from '@/components/ui/Button'
@@ -50,15 +50,6 @@ export function HeroEnhanced() {
   const y2 = useTransform(scrollY, [0, 500], [0, -100])
   const opacity = useTransform(scrollY, [0, 300], [1, 0])
   
-  const stats = [
-    { value: 10000, suffix: '+', label: 'Crew Members Tracked', icon: Users },
-    { value: 99.9, suffix: '%', label: 'Compliance Rate', icon: Shield },
-    { value: 85, suffix: '%', label: 'Time Saved', icon: Clock },
-  ]
-
-  const trustedLogos = [
-    'Airline Alpha', 'Sky Academy', 'Global MRO', 'AeroTech', 'FlightSafe'
-  ]
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-[#0a0f1a]">
@@ -191,7 +182,7 @@ export function HeroEnhanced() {
               transition={{ delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-4 mb-12"
             >
-              <button className="group relative px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl font-semibold text-white text-lg shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-3">
+              <button disabled className="group relative px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl font-semibold text-white text-lg shadow-lg flex items-center justify-center gap-3 opacity-50 cursor-not-allowed pointer-events-none">
                 <Calendar className="w-5 h-5" />
                 <span>{t('ctaPrimary')}</span>
                 <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-400 to-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity -z-10 blur-xl" />
@@ -327,49 +318,32 @@ export function HeroEnhanced() {
           </motion.div>
         </div>
         
-        {/* Live Stats Bar */}
+        {/* Animated Capability Pills */}
         <motion.div 
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1 }}
-          className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-6"
+          className="mt-20 flex flex-wrap justify-center gap-4"
         >
-          {stats.map((stat, i) => {
-            const Icon = stat.icon
-            return (
-              <div 
-                key={stat.label}
-                className="flex items-center gap-4 p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10"
-              >
-                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500/20 to-cyan-500/20 flex items-center justify-center">
-                  <Icon className="w-6 h-6 text-blue-400" />
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-white">
-                    <AnimatedCounter target={stat.value} suffix={stat.suffix} />
-                  </div>
-                  <div className="text-sm text-white/50">{stat.label}</div>
-                </div>
-              </div>
-            )
-          })}
-        </motion.div>
-        
-        {/* Trusted By Logos */}
-        <motion.div 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.2 }}
-          className="mt-16 text-center"
-        >
-          <p className="text-sm text-white/40 mb-6">Trusted by leading aviation organizations</p>
-          <div className="flex flex-wrap justify-center gap-8 opacity-50">
-            {trustedLogos.map((logo) => (
-              <div key={logo} className="h-8 px-6 bg-white/10 rounded-lg flex items-center justify-center">
-                <span className="text-white/60 font-medium text-sm">{logo}</span>
-              </div>
-            ))}
-          </div>
+          {[
+            { label: 'Digital Signatures', icon: '✍️', delay: 0 },
+            { label: 'Smart Scheduling', icon: '📅', delay: 0.1 },
+            { label: 'Audit Reports', icon: '📋', delay: 0.2 },
+            { label: 'Proficiency Checks', icon: '✅', delay: 0.3 },
+            { label: 'Expiry Tracking', icon: '⏰', delay: 0.4 },
+            { label: 'RBAC Security', icon: '🔒', delay: 0.5 },
+          ].map((pill) => (
+            <motion.div
+              key={pill.label}
+              initial={{ opacity: 0, scale: 0.8, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ delay: 1.2 + pill.delay, duration: 0.5, type: 'spring', stiffness: 200 }}
+              className="flex items-center gap-2.5 px-5 py-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full hover:bg-white/10 hover:border-white/20 transition-colors duration-300 cursor-default"
+            >
+              <span className="text-lg">{pill.icon}</span>
+              <span className="text-sm font-medium text-white/80">{pill.label}</span>
+            </motion.div>
+          ))}
         </motion.div>
       </div>
       

@@ -3,78 +3,62 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { 
-  BarChart3, Shield, Clock, PenLine, FileCheck, 
-  Bell, Users, Zap, Lock, Globe, Smartphone, Cloud
+  BarChart3, Zap, PenLine, ShieldCheck, 
+  Layers, Bell, FileCheck, Lock
 } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 
 const features = [
   {
     id: 'dashboard',
-    title: 'Traffic Light Dashboard',
-    description: 'See your entire organization\'s compliance status at a glance. Green, amber, and red indicators make it impossible to miss expiring certifications.',
     icon: BarChart3,
     gradient: 'from-emerald-500 to-teal-500',
     size: 'large',
     visual: 'dashboard',
   },
   {
-    id: 'automation',
-    title: 'Zero Manual Tracking',
-    description: 'Automatic expiry calculations and workflow triggers. Save 15+ hours per week.',
+    id: 'scheduler',
     icon: Zap,
     gradient: 'from-blue-500 to-cyan-500',
     size: 'medium',
-    stat: { value: '15+', label: 'Hours saved weekly' },
+    visual: 'calendar',
   },
   {
     id: 'signatures',
-    title: 'Digital Signatures',
-    description: 'Legally binding canvas signatures with cryptographic verification.',
     icon: PenLine,
     gradient: 'from-violet-500 to-purple-500',
     size: 'medium',
     visual: 'signature',
   },
   {
-    id: 'alerts',
-    title: 'Smart Notifications',
-    description: 'Automated alerts at 90, 60, 30, 14, and 7 days before expiry. Never miss a renewal.',
+    id: 'checks',
+    icon: ShieldCheck,
+    gradient: 'from-indigo-500 to-blue-500',
+    size: 'medium',
+    visual: 'workflow',
+  },
+  {
+    id: 'curriculum',
+    icon: Layers,
+    gradient: 'from-rose-500 to-pink-500',
+    size: 'small',
+  },
+  {
+    id: 'notifications',
     icon: Bell,
     gradient: 'from-amber-500 to-orange-500',
     size: 'small',
   },
   {
     id: 'reports',
-    title: 'One-Click Audit Reports',
-    description: 'Generate EASA-compliant PDF dossiers instantly. Impress auditors, not bore them.',
     icon: FileCheck,
-    gradient: 'from-rose-500 to-pink-500',
+    gradient: 'from-cyan-500 to-blue-500',
     size: 'small',
   },
   {
     id: 'security',
-    title: 'Enterprise Security',
-    description: 'Row-level isolation, encrypted storage, and GDPR compliance built-in.',
     icon: Lock,
-    gradient: 'from-slate-600 to-slate-800',
-    size: 'small',
-  },
-  {
-    id: 'lpc',
-    title: 'LPC/OPC Management',
-    description: 'Automated retake workflows, assessor conflict detection, and the 3-attempt rule enforced automatically.',
-    icon: Users,
-    gradient: 'from-indigo-500 to-blue-500',
-    size: 'medium',
-    visual: 'workflow',
-  },
-  {
-    id: 'mobile',
-    title: 'Works Everywhere',
-    description: 'Fully responsive. Instructors use iPads in the field for real-time signatures.',
-    icon: Smartphone,
-    gradient: 'from-cyan-500 to-blue-500',
+    gradient: 'from-slate-500 to-slate-700',
     size: 'small',
   },
 ]
@@ -83,9 +67,9 @@ function DashboardVisual() {
   return (
     <div className="mt-4 grid grid-cols-3 gap-2">
       {[
-        { color: 'bg-emerald-500', count: 142 },
-        { color: 'bg-amber-500', count: 8 },
-        { color: 'bg-red-500', count: 0 },
+        { color: 'bg-emerald-500', count: 247, label: 'Valid' },
+        { color: 'bg-amber-500', count: 12, label: 'Expiring' },
+        { color: 'bg-red-500', count: 0, label: 'Expired' },
       ].map((item, i) => (
         <motion.div
           key={i}
@@ -97,6 +81,30 @@ function DashboardVisual() {
         >
           <div className="text-2xl font-bold text-white">{item.count}</div>
           <div className={`w-full h-1 ${item.color} rounded-full mt-2`} />
+          <div className="text-[10px] text-white/50 mt-1">{item.label}</div>
+        </motion.div>
+      ))}
+    </div>
+  )
+}
+
+function CalendarVisual() {
+  return (
+    <div className="mt-4 grid grid-cols-5 gap-1.5">
+      {[...Array(15)].map((_, i) => (
+        <motion.div
+          key={i}
+          initial={{ scale: 0, opacity: 0 }}
+          whileInView={{ scale: 1, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3 + i * 0.04, type: 'spring', stiffness: 400 }}
+          className={`aspect-square rounded-md flex items-center justify-center text-[8px] font-medium ${
+            [2, 5, 8, 11].includes(i) 
+              ? 'bg-white/30 text-white' 
+              : 'bg-white/10 text-white/30'
+          }`}
+        >
+          {[2, 5, 8, 11].includes(i) ? '✓' : ''}
         </motion.div>
       ))}
     </div>
@@ -120,15 +128,18 @@ function SignatureVisual() {
         />
       </svg>
       <div className="flex items-center justify-between mt-2 text-xs text-white/60">
-        <span>Signed by: J. Smith</span>
-        <span>✓ Verified</span>
+        <span>SHA-256 Hash: a7f2...e8b1</span>
+        <span className="text-emerald-400 flex items-center gap-1">
+          <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full" />
+          Verified
+        </span>
       </div>
     </div>
   )
 }
 
 function WorkflowVisual() {
-  const steps = ['Check', 'Review', 'Approve', 'Complete']
+  const steps = ['Check', 'Evaluate', 'Sign', 'Finalize']
   return (
     <div className="mt-4 flex items-center justify-between">
       {steps.map((step, i) => (
@@ -140,13 +151,12 @@ function WorkflowVisual() {
           viewport={{ once: true }}
           className="flex flex-col items-center"
         >
-          <div className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold ${i < 3 ? 'bg-white text-indigo-600' : 'bg-white/20 text-white'}`}>
+          <div className={`w-9 h-9 rounded-full flex items-center justify-center text-xs font-bold ${
+            i < 3 ? 'bg-white text-indigo-600' : 'bg-white/20 text-white'
+          }`}>
             {i < 3 ? '✓' : i + 1}
           </div>
           <span className="text-[10px] text-white/60 mt-1">{step}</span>
-          {i < steps.length - 1 && (
-            <div className="absolute w-8 h-0.5 bg-white/20" style={{ marginLeft: '48px' }} />
-          )}
         </motion.div>
       ))}
     </div>
@@ -154,6 +164,7 @@ function WorkflowVisual() {
 }
 
 function FeatureCard({ feature, index }: { feature: typeof features[0]; index: number }) {
+  const t = useTranslations('features')
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
   const Icon = feature.icon
@@ -170,6 +181,7 @@ function FeatureCard({ feature, index }: { feature: typeof features[0]; index: n
       initial={{ opacity: 0, y: 30 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ delay: index * 0.1, duration: 0.5 }}
+      whileHover={{ y: -8, scale: 1.02 }}
       className={`group relative overflow-hidden rounded-3xl bg-gradient-to-br ${feature.gradient} p-6 md:p-8 ${sizeClasses[feature.size as keyof typeof sizeClasses]} cursor-pointer`}
     >
       {/* Hover glow effect */}
@@ -186,24 +198,17 @@ function FeatureCard({ feature, index }: { feature: typeof features[0]; index: n
         
         {/* Content */}
         <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
-          {feature.title}
+          {t(`${feature.id}.title`)}
         </h3>
-        <p className="text-white/80 text-sm md:text-base leading-relaxed flex-grow">
-          {feature.description}
+        <p className="text-white/80 text-sm md:text-base leading-relaxed flex-grow pb-8">
+          {t(`${feature.id}.description`)}
         </p>
         
         {/* Visual elements based on feature type */}
         {feature.visual === 'dashboard' && <DashboardVisual />}
+        {feature.visual === 'calendar' && <CalendarVisual />}
         {feature.visual === 'signature' && <SignatureVisual />}
         {feature.visual === 'workflow' && <WorkflowVisual />}
-        
-        {/* Stat highlight */}
-        {feature.stat && (
-          <div className="mt-4 flex items-baseline gap-2">
-            <span className="text-4xl font-bold text-white">{feature.stat.value}</span>
-            <span className="text-white/60 text-sm">{feature.stat.label}</span>
-          </div>
-        )}
       </div>
       
       {/* Decorative elements */}
@@ -233,17 +238,17 @@ export function BentoFeatures() {
             className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-medium mb-4"
           >
             <Zap className="w-4 h-4" />
-            Powerful Features
+            {t('badge')}
           </motion.span>
           
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-            Everything you need for{' '}
+            {t('title').split('|')[0]}
             <span className="bg-gradient-to-r from-primary to-cyan-500 bg-clip-text text-transparent">
-              complete compliance
+              {t('title').split('|')[1] || ''}
             </span>
           </h2>
           <p className="text-xl text-slate-600">
-            From automated tracking to audit-ready reports. One platform, zero spreadsheets.
+            {t('subtitle')}
           </p>
         </motion.div>
         

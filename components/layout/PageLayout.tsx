@@ -2,7 +2,7 @@
 
 import { Navigation } from './Navigation'
 import { FooterEnhanced } from './FooterEnhanced'
-import { FloatingCTA, BackToTop, LiveChat, ScrollProgress } from '@/components/ui/FloatingElements'
+import { BackToTop, LiveChat, ScrollProgress } from '@/components/ui/FloatingElements'
 
 export function PageLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -11,7 +11,7 @@ export function PageLayout({ children }: { children: React.ReactNode }) {
       <Navigation />
       {children}
       <FooterEnhanced />
-      <FloatingCTA />
+
       <BackToTop />
       <LiveChat />
     </>

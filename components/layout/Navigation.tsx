@@ -72,16 +72,6 @@ export function Navigation() {
       href: `/${locale}/industries/ground-handling`,
       description: t('industries.groundHandlingDesc')
     },
-    { 
-      label: t('industries.maritime'), 
-      href: `/${locale}/industries/maritime`,
-      description: t('industries.maritimeDesc')
-    },
-    { 
-      label: t('industries.healthcare'), 
-      href: `/${locale}/industries/healthcare`,
-      description: t('industries.healthcareDesc')
-    },
   ]
 
   // Product dropdown items
@@ -119,7 +109,6 @@ export function Navigation() {
   ]
 
   const navLinks = [
-    { href: '#pricing', label: t('pricing') },
     { href: '#faq', label: t('faq') },
   ]
 
@@ -196,6 +185,7 @@ export function Navigation() {
             href="#contact" 
             variant={scrolled ? 'primary' : 'ghost'}
             size="default"
+            disabled
           >
             {t('bookDemo')}
           </Button>
@@ -288,7 +278,7 @@ export function Navigation() {
             <div className="pt-4 flex items-center justify-between">
               <LanguageSwitcher scrolled={true} />
             </div>
-            <Button href="#contact" variant="primary" className="w-full">
+            <Button href="#contact" variant="primary" className="w-full" disabled>
               {t('bookDemo')}
             </Button>
           </div>

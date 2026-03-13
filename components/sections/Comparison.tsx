@@ -7,33 +7,33 @@ import { Check, X, ArrowRight, Sparkles } from 'lucide-react'
 const comparisonData = [
   {
     feature: 'Expiry Tracking',
-    spreadsheet: 'Manual updates, easy to miss deadlines',
-    certifycloud: 'Automatic calculations, smart alerts',
+    spreadsheet: 'Manual updates, easy to miss',
+    certifycloud: 'Auto-calculated with configurable alerts',
+  },
+  {
+    feature: 'Scheduling',
+    spreadsheet: 'Back-and-forth emails, conflicts',
+    certifycloud: 'Auto-scheduler with instructor availability & daily limits',
+  },
+  {
+    feature: 'Proficiency Checks',
+    spreadsheet: 'Paper protocols, manual sign-off',
+    certifycloud: 'Digital item-bank, QR-verified protocols, auto-finalization',
   },
   {
     feature: 'Audit Preparation',
-    spreadsheet: '3+ days compiling documents',
-    certifycloud: 'One-click, instant PDF dossiers',
+    spreadsheet: '3+ days compiling binders',
+    certifycloud: 'One-click PDF dossiers with full audit trail',
   },
   {
     feature: 'Digital Signatures',
-    spreadsheet: 'Print, sign, scan, file manually',
-    certifycloud: 'Canvas signatures with verification',
-  },
-  {
-    feature: 'Compliance Visibility',
-    spreadsheet: 'Check spreadsheet, hope it\'s updated',
-    certifycloud: 'Real-time traffic light dashboard',
+    spreadsheet: 'Print → sign → scan → file',
+    certifycloud: 'Canvas signatures with SHA-256 cryptographic seal',
   },
   {
     feature: 'Multi-User Access',
     spreadsheet: 'File conflicts, version chaos',
-    certifycloud: 'Role-based access, audit trails',
-  },
-  {
-    feature: 'Regulatory Updates',
-    spreadsheet: 'Manual research and implementation',
-    certifycloud: 'Auto-updated compliance rules',
+    certifycloud: '5 RBAC roles, RLS tenant isolation, auditor read-only mode',
   },
 ]
 

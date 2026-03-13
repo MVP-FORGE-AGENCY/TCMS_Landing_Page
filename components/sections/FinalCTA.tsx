@@ -58,6 +58,7 @@ export function FinalCTA() {
               size="large"
               icon={<Calendar className="w-5 h-5" />}
               className="shadow-2xl shadow-primary/40"
+              disabled
             >
               {t('primary')}
             </Button>

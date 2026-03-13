@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Calendar, ArrowRight, Check, Sparkles, Shield, Clock, CreditCard } from 'lucide-react'
+import { Calendar, ArrowRight, Check, Sparkles, Shield, Clock, CreditCard, PenLine, Zap, FileCheck } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import { ScheduleDemoModal } from '@/components/ui/ScheduleDemoModal'
 
@@ -58,7 +58,7 @@ export function FinalCTAEnhanced() {
         
         <div className="container-lg relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            {/* Badge */}
+            {/* Badge — capability-focused */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -66,7 +66,7 @@ export function FinalCTAEnhanced() {
               className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white/90 text-sm font-medium mb-8"
             >
               <Sparkles className="w-4 h-4" />
-              Join 500+ aviation organizations
+              All-in-one aviation compliance platform
             </motion.div>
             
             {/* Heading */}
@@ -99,8 +99,8 @@ export function FinalCTAEnhanced() {
               className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
             >
               <button 
-                onClick={() => setIsModalOpen(true)}
-                className="group relative px-8 py-4 bg-white rounded-xl font-semibold text-blue-600 text-lg shadow-2xl shadow-black/20 hover:shadow-black/30 transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center gap-3"
+                disabled
+                className="group relative px-8 py-4 bg-white rounded-xl font-semibold text-blue-600 text-lg shadow-2xl flex items-center gap-3 opacity-50 cursor-not-allowed pointer-events-none"
               >
                 <Calendar className="w-5 h-5" />
                 <span>{t('primary')}</span>
@@ -120,7 +120,7 @@ export function FinalCTAEnhanced() {
               transition={{ delay: 0.4 }}
               className="flex flex-wrap items-center justify-center gap-6"
             >
-              {benefits.map((benefit, i) => {
+              {benefits.map((benefit) => {
                 const Icon = benefit.icon
                 return (
                   <div 
@@ -137,49 +137,75 @@ export function FinalCTAEnhanced() {
             </motion.div>
           </div>
           
-          {/* Floating testimonial cards */}
+          {/* Floating capability cards — replacing fake testimonials */}
           <div className="hidden lg:block">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.5 }}
-              className="absolute left-8 top-1/3 bg-white rounded-2xl p-4 shadow-xl max-w-[220px] -rotate-3"
+              transition={{ delay: 0.5, type: 'spring', stiffness: 200, damping: 20 }}
+              whileHover={{ y: -5, scale: 1.03 }}
+              className="absolute left-8 top-1/3 bg-white/10 backdrop-blur-xl rounded-2xl p-4 shadow-xl max-w-[220px] -rotate-3 border border-white/20"
             >
-              <div className="flex items-center gap-1 mb-2">
-                {[...Array(5)].map((_, i) => (
-                  <span key={i} className="text-amber-400">★</span>
-                ))}
+              <div className="flex items-center gap-3 mb-2">
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-500 to-purple-500 flex items-center justify-center">
+                  <PenLine className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-white">Digital Seal</p>
+                  <p className="text-xs text-white/60">SHA-256 Verified</p>
+                </div>
               </div>
-              <p className="text-sm text-slate-700">&quot;Best compliance tool we&apos;ve used&quot;</p>
-              <p className="text-xs text-slate-500 mt-2">— Training Manager</p>
+              <div className="flex items-center gap-1.5 text-xs text-emerald-300">
+                <Check className="w-3.5 h-3.5" />
+                <span>QR Code Generated</span>
+              </div>
             </motion.div>
             
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.6 }}
-              className="absolute right-8 top-1/4 bg-white rounded-2xl p-4 shadow-xl max-w-[220px] rotate-3"
+              transition={{ delay: 0.6, type: 'spring', stiffness: 200, damping: 20 }}
+              whileHover={{ y: -5, scale: 1.03 }}
+              className="absolute right-8 top-1/4 bg-white/10 backdrop-blur-xl rounded-2xl p-4 shadow-xl max-w-[220px] rotate-3 border border-white/20"
             >
-              <div className="text-3xl font-bold text-emerald-500 mb-1">80%</div>
-              <p className="text-sm text-slate-600">Less time on admin</p>
+              <div className="flex items-center gap-3 mb-2">
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center">
+                  <Zap className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-white">Auto-Scheduler</p>
+                  <p className="text-xs text-white/60">Batch Sessions</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-1.5 text-xs text-emerald-300">
+                <Check className="w-3.5 h-3.5" />
+                <span>12 sessions planned</span>
+              </div>
             </motion.div>
             
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.7 }}
-              className="absolute right-24 bottom-1/4 bg-white rounded-2xl p-4 shadow-xl max-w-[200px] -rotate-2"
+              transition={{ delay: 0.7, type: 'spring', stiffness: 200, damping: 20 }}
+              whileHover={{ y: -5, scale: 1.03 }}
+              className="absolute right-24 bottom-1/4 bg-white/10 backdrop-blur-xl rounded-2xl p-4 shadow-xl max-w-[200px] -rotate-2 border border-white/20"
             >
-              <div className="flex items-center gap-2 mb-2">
-                <div className="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center">
-                  <Check className="w-4 h-4 text-emerald-600" />
+              <div className="flex items-center gap-3 mb-2">
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center">
+                  <FileCheck className="w-5 h-5 text-white" />
                 </div>
-                <span className="font-semibold text-slate-800">Zero violations</span>
+                <div>
+                  <p className="text-sm font-semibold text-white">Smart Alerts</p>
+                  <p className="text-xs text-white/60">Expiry Monitor</p>
+                </div>
               </div>
-              <p className="text-xs text-slate-500">Since implementation</p>
+              <div className="flex items-center gap-1.5 text-xs text-amber-300">
+                <span className="w-2 h-2 bg-amber-400 rounded-full animate-pulse" />
+                <span>3 expiring in 30 days</span>
+              </div>
             </motion.div>
           </div>
         </div>

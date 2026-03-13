@@ -41,7 +41,6 @@
       "enterpriseSecurity": "Enterprise Security",
       "enterpriseSecurityDesc": "Row-level security and GDPR compliance"
     },
-    "pricing": "Pricing",
     "faq": "FAQ",
     "bookDemo": "Book Demo"
   },
@@ -54,59 +53,56 @@
     "trust2": "Setup in 7 days",
     "trust3": "No credit card required"
   },
-  "socialProof": {
-    "text": "Trusted by aviation organizations ensuring compliance for 10,000+ crew members",
-    "badge1": "Aviation Safety Network Partner",
-    "badge2": "IATA Recommended Solution",
-    "badge3": "Certified for EASA Compliance"
-  },
   "problem": {
     "title": "The Hidden Costs of Manual Training Compliance",
     "risk": {
-      "title": "Compliance Violations",
-      "description": "Operating with expired qualifications leads to regulatory fines and grounded operations"
+      "title": "Compliance Risk",
+      "description": "A single expired OPC can ground your entire fleet operation. Operating with lapsed qualifications leads to regulatory fines and safety hazards."
     },
     "inefficiency": {
-      "title": "Administrative Burden",
-      "description": "Training managers spend 15+ hours/week updating spreadsheets and chasing signatures"
+      "title": "Scheduling Chaos",
+      "description": "Coordinating training for 100+ crew across multiple aircraft types means endless emails, calendar conflicts, and missed sessions."
     },
     "visibility": {
-      "title": "No Real-Time Visibility",
-      "description": "Executives discover expired certifications during audits, not before"
+      "title": "Audit Nightmare",
+      "description": "3 days compiling paper protocols for an EASA inspection. Executives discover expired certifications during audits, not before."
     }
   },
   "features": {
-    "title": "One Platform for Complete Training Compliance",
-    "subtitle": "Digital workflow from scheduling to audit-ready reporting",
-    "visual": {
-      "title": "Visual Compliance Status",
-      "description": "Instant fleet readiness overview with color-coded expiry tracking (90/30/14/7 day alerts)",
-      "cta": "See Dashboard Demo"
+    "badge": "Powerful Features",
+    "title": "Everything you need for |complete compliance",
+    "subtitle": "From automated tracking to audit-ready reports. One platform, zero spreadsheets.",
+    "dashboard": {
+      "title": "Compliance Dashboard",
+      "description": "Traffic-light system (Green/Amber/Red) with department filtering and expiry slider. RPC-optimized for <50ms loads across your entire organization."
     },
-    "automated": {
-      "title": "Zero Manual Tracking",
-      "description": "Automatically calculate valid-until dates and trigger compliance workflows",
-      "badge": "Save 15 hrs/week"
+    "scheduler": {
+      "title": "Smart Auto-Scheduler",
+      "description": "Batch schedule sessions across modules respecting preferred days, time slots, instructor availability, and 8-hour daily limits."
     },
-    "paperless": {
-      "title": "Paperless Workflow",
-      "description": "Canvas-based signatures with cryptographic verification and audit trail",
-      "badge": "Legally Binding"
+    "signatures": {
+      "title": "Digital Signatures & Seal",
+      "description": "Canvas signatures with SHA-256 cryptographic hash and QR verification code on PDFs. Tamper-proof protocols you can trust."
     },
-    "proficiency": {
-      "title": "LPC/OPC Management",
-      "description": "Automated retake workflows with assessor conflict detection and attempt tracking",
-      "badge": "Max 3 attempts enforced"
+    "checks": {
+      "title": "Proficiency Checks (OPC/LPC)",
+      "description": "Item-bank assessment, conflict-of-interest detection, auto-finalization on last assessor sign-off, and protocol generation."
+    },
+    "curriculum": {
+      "title": "Curriculum Builder",
+      "description": "Drag-and-drop module sequencing with 3 assessment strategies, semantic versioning, and revision snapshots."
+    },
+    "notifications": {
+      "title": "Smart Notifications",
+      "description": "Real-time aggregation across competences, checks, and password expiry. In-app plus batched email alerts."
     },
     "reports": {
-      "title": "One-Click Compliance Reports",
-      "description": "Generate EASA-compliant PDF dossiers with complete audit trails",
-      "badge": "Pass audits faster"
+      "title": "One-Click Audit Reports",
+      "description": "PDF dossier generation with print/CSV export, monthly compliance scoring, and risk-level classification."
     },
     "security": {
       "title": "Enterprise Security",
-      "description": "Row-level security with organization isolation and encrypted storage",
-      "badge": "GDPR Ready"
+      "description": "RBAC (5 roles), RLS tenant isolation, audit trail (~50 semantic actions), password expiry, auditor read-only mode."
     }
   },
   "dashboard": {
@@ -127,23 +123,23 @@
     "compliance": {
       "stat": "100%",
       "statLabel": "Compliance Rate",
-      "title": "Compliance Assurance",
-      "description": "Automated expiry tracking ensures no crew member operates with lapsed qualifications. Stay ahead of EASA ADR.OR.D.017 requirements.",
-      "proof": "Zero regulatory violations in 2 years"
+      "title": "Zero Expired Qualifications",
+      "description": "Auto-alerts at configurable thresholds (90/60/30/14/7 days) plus background job scanning ensure no crew member ever operates with lapsed qualifications.",
+      "capability": "Configurable alert thresholds with background expiry scanning"
     },
     "time": {
-      "stat": "87%",
-      "statLabel": "Faster Admin",
-      "title": "Time Savings",
-      "description": "Eliminate spreadsheet maintenance, manual email reminders, and paper filing. Reclaim 60+ hours per month.",
-      "proof": "ROI in 3 months"
+      "stat": "85%",
+      "statLabel": "Less Admin Time",
+      "title": "85% Less Admin Time",
+      "description": "Auto-scheduler handles batch enrollment, session planning respects instructor availability and daily limits. One-click certificate generation replaces manual workflows.",
+      "capability": "Auto-scheduler, batch enrollment, one-click certificate generation"
     },
     "audit": {
-      "stat": "4hr",
+      "stat": "<1hr",
       "statLabel": "Audit Prep",
-      "title": "Audit Readiness",
-      "description": "Generate complete audit packages with one click. Immutable audit logs and digital signatures satisfy regulators instantly.",
-      "proof": "Passed 12 external audits"
+      "title": "Instant Audit Readiness",
+      "description": "Full immutable audit trail tracking ~50 semantic actions. One-click PDF export generates complete dossiers. Monthly compliance reports with risk-level classification.",
+      "capability": "Immutable audit trail with ~50 semantic action types"
     }
   },
   "industries": {
@@ -233,109 +229,73 @@
     "gdpr": "GDPR Compliant",
     "gdprDesc": "Data Protection"
   },
-  "pricing": {
-    "title": "Transparent Pricing That Scales With You",
-    "subtitle": "All plans include a 14-day free trial. No credit card required.",
-    "annualDiscount": "Save 20% with annual billing",
-    "starter": {
-      "name": "Starter",
-      "price": "$299",
-      "period": "/month",
-      "subtext": "For small operators up to 50 personnel",
-      "features": [
-        "Up to 50 tracked personnel",
-        "2 admin users",
-        "Traffic light dashboard",
-        "Automated expiry tracking",
-        "Digital signatures",
-        "Email support",
-        "5GB storage"
-      ],
-      "cta": "Start Free Trial"
+  "howItWorks": {
+    "badge": "Simple 4-Step Process",
+    "title": "From Setup to |Full Compliance",
+    "subtitle": "See how CertifyCloud takes you from regulatory requirements to audit-ready operations.",
+    "step1": {
+      "title": "Define Standards & Curricula",
+      "description": "Set up regulatory requirements and build training blueprints with modular curricula, assessment strategies, and semantic versioning."
     },
-    "professional": {
-      "name": "Professional",
-      "price": "$599",
-      "period": "/month",
-      "subtext": "For growing organizations up to 150 personnel",
-      "badge": "Most Popular",
-      "features": [
-        "Up to 150 tracked personnel",
-        "5 admin users",
-        "LPC/OPC management",
-        "Custom grading schemas",
-        "Priority email support",
-        "25GB storage",
-        "API access"
-      ],
-      "cta": "Start Free Trial"
+    "step2": {
+      "title": "Schedule & Execute Training",
+      "description": "Auto-schedule campaigns, manage sessions, track attendance, and grade in real-time with instructor availability checks."
     },
-    "enterprise": {
-      "name": "Enterprise",
-      "price": "$1,199",
-      "period": "/month",
-      "subtext": "For established operators up to 500 personnel",
-      "badge": "Best Value",
-      "features": [
-        "Up to 500 tracked personnel",
-        "Unlimited admin users",
-        "Multi-base support",
-        "SSO/SAML integration",
-        "Dedicated success manager",
-        "100GB storage",
-        "Phone support"
-      ],
-      "cta": "Contact Sales"
+    "step3": {
+      "title": "Verify & Certify",
+      "description": "Conduct proficiency checks (OPC/LPC), collect digital signatures, and auto-generate certificates with cryptographic seals."
     },
-    "fleet": {
-      "name": "Fleet",
-      "price": "Custom",
-      "period": "",
-      "subtext": "For large-scale operations with 500+ personnel",
-      "features": [
-        "Unlimited personnel",
-        "Dedicated infrastructure",
-        "99.9% SLA guarantee",
-        "Unlimited storage",
-        "On-site training",
-        "Custom integrations",
-        "Regulatory consultation"
-      ],
-      "cta": "Book Consultation"
-    },
-    "calculator": {
-      "title": "Calculate Your Time Savings",
-      "employees": "Number of employees: {count}",
-      "hours": "Hours spent on admin/week: {count}",
-      "annualSavings": "Annual Savings",
-      "timeRecovered": "Hours Recovered/Year",
-      "roi": "ROI (months)"
+    "step4": {
+      "title": "Monitor & Stay Compliant",
+      "description": "Traffic-light dashboard with smart alerts, expiring competence reports, and audit-ready PDF export at any time."
     }
   },
-  "testimonials": {
-    "title": "Trusted by Aviation Leaders",
-    "testimonial1": {
-      "quote": "CertifyCloud reduced our training admin workload by 80%. We went from weekly spreadsheet updates to real-time compliance visibility. The ROI was immediate.",
-      "author": "John Mitchell",
-      "role": "Training Manager",
-      "company": "Regional Airline (150 pilots)",
-      "metric": "80% reduction in admin time"
+  "platformDeepDive": {
+    "badge": "Platform Deep Dive",
+    "title": "Explore Every |Module",
+    "subtitle": "Interactive walkthrough of CertifyCloud's five core modules.",
+    "tabs": {
+      "dashboard": "Dashboard",
+      "training": "Training",
+      "checks": "Checks",
+      "personnel": "Personnel",
+      "reporting": "Reporting"
     },
-    "testimonial2": {
-      "quote": "During our last EASA audit, we generated all required documentation in under 2 hours. Previously, it took our team 3 days to compile paper records. The auditors were impressed.",
-      "author": "Sarah Chen",
-      "role": "Compliance Officer",
-      "company": "International Flight Academy (400 students)",
-      "metric": "2 hours vs 3 days audit prep"
+    "dashboard": {
+      "subtitle": "Real-time compliance overview",
+      "feature1": "Traffic-light cards showing valid, expiring, and expired competences at a glance",
+      "feature2": "Compliance trend chart with monthly scoring and department-level breakdown",
+      "feature3": "My Actions alert list — pending sign-offs, upcoming expirations, and assigned tasks",
+      "feature4": "Department filter and expiry slider for instant drill-down analysis"
     },
-    "testimonial3": {
-      "quote": "The traffic light dashboard changed everything. Our operations director can now see fleet readiness instantly without requesting reports. We've had zero expired qualifications since implementation.",
-      "author": "David Larsson",
-      "role": "Operations Manager",
-      "company": "Charter Operator (45 crew members)",
-      "metric": "Zero compliance violations"
+    "training": {
+      "subtitle": "Campaign & session management",
+      "feature1": "Campaign management with batch enrollment and progress tracking bars",
+      "feature2": "Auto-scheduler that respects preferred days, instructor availability, and 8h daily limits",
+      "feature3": "Session management with real-time attendance tracking and grading",
+      "feature4": "Module sequencing with drag-and-drop curriculum builder and versioning"
     },
-    "caseStudies": "Read Full Case Studies"
+    "checks": {
+      "subtitle": "OPC/LPC workflow engine",
+      "feature1": "Full OPC/LPC workflow: Initiate → Evaluate → Sign → Finalize with status tracking",
+      "feature2": "Item-bank assessment system with configurable grading schemas (1-5, AQP, EBT)",
+      "feature3": "Conflict-of-interest detection prevents assessors from evaluating their own trainees",
+      "feature4": "Auto-finalization on last assessor sign-off with QR-verified protocol generation"
+    },
+    "personnel": {
+      "subtitle": "Role-based access control",
+      "feature1": "5 RBAC roles: Admin, Training Manager, Instructor, Auditor, Employee",
+      "feature2": "Auditor read-only mode for external inspection teams with time-limited access",
+      "feature3": "Employee dossier with full training history, certifications, and competence status",
+      "feature4": "Row-level security (RLS) ensures complete tenant isolation between organizations"
+    },
+    "reporting": {
+      "subtitle": "Audit-ready export engine",
+      "feature1": "Expiring competences slider — filter by 30, 60, or 90-day windows instantly",
+      "feature2": "One-click PDF dossier generation with complete audit trail and digital signatures",
+      "feature3": "Monthly compliance score with risk-level classification (Green/Amber/Red)",
+      "feature4": "Print and CSV export controls for customized regulatory reporting"
+    }
   },
   "faq": {
     "title": "Frequently Asked Questions",
@@ -374,7 +334,7 @@
   },
   "cta": {
     "title": "Stop Risking Compliance Violations",
-    "subtitle": "Join aviation organizations using CertifyCloud to automate training compliance and eliminate manual tracking.",
+    "subtitle": "Automate your aviation training compliance and eliminate manual tracking with CertifyCloud's all-in-one platform.",
     "primary": "Book Your Demo",
     "secondary": "Start 14-Day Free Trial",
     "trust1": "Setup in 7 days",
@@ -387,7 +347,6 @@
     "copyright": "© 2026 CertifyCloud. All rights reserved.",
     "quickLinks": "Quick Links",
     "product": "Product",
-    "pricing": "Pricing",
     "caseStudies": "Case Studies",
     "documentation": "Documentation",
     "support": "Support",

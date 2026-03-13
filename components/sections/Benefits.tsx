@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ShieldCheck, Clock, FileStack, Quote } from 'lucide-react'
+import { ShieldCheck, Clock, FileStack } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 
@@ -15,7 +15,7 @@ export function Benefits() {
       statLabel: t('compliance.statLabel'),
       title: t('compliance.title'),
       description: t('compliance.description'),
-      proof: t('compliance.proof'),
+      capability: t('compliance.capability'),
       gradient: 'from-emerald-500 to-green-600',
     },
     {
@@ -24,7 +24,7 @@ export function Benefits() {
       statLabel: t('time.statLabel'),
       title: t('time.title'),
       description: t('time.description'),
-      proof: t('time.proof'),
+      capability: t('time.capability'),
       gradient: 'from-blue-500 to-cyan-500',
     },
     {
@@ -33,7 +33,7 @@ export function Benefits() {
       statLabel: t('audit.statLabel'),
       title: t('audit.title'),
       description: t('audit.description'),
-      proof: t('audit.proof'),
+      capability: t('audit.capability'),
       gradient: 'from-purple-500 to-pink-500',
     },
   ]
@@ -55,7 +55,7 @@ export function Benefits() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className={`p-8 rounded-2xl ${i % 2 === 0 ? 'bg-white' : 'bg-surface-light'}`}
+                className={`p-8 rounded-2xl ${i % 2 === 0 ? 'bg-white' : 'bg-surface-light'} transition-colors duration-300`}
               >
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${benefit.gradient} flex items-center justify-center mb-6`}>
                   <Icon className="w-8 h-8 text-white" />
@@ -77,9 +77,11 @@ export function Benefits() {
                 </p>
                 
                 <div className="flex items-start gap-2 pt-4 border-t border-gray-200">
-                  <Quote className="w-4 h-4 text-success flex-shrink-0 mt-1" />
-                  <p className="text-sm italic text-text-medium">
-                    {benefit.proof}
+                  <div className="w-5 h-5 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <ShieldCheck className="w-3 h-3 text-emerald-600" />
+                  </div>
+                  <p className="text-sm text-text-medium">
+                    {benefit.capability}
                   </p>
                 </div>
               </motion.div>
