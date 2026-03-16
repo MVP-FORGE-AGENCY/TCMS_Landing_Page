@@ -182,7 +182,6 @@
       "useCases": [
         "Ground staff training",
         "Safety compliance tracking",
-        "Equipment certification",
         "Multi-site management"
       ],
       "capability": "Multi-site training coordination",
@@ -219,7 +218,7 @@
     "cta": "Schedule Implementation Call"
   },
   "compliance": {
-    "title": "Certified Compliance with Global Standards",
+    "title": "Compliance with Global Standards",
     "easa": "EASA ADR.OR.D.017",
     "easaDesc": "European Aviation Safety Agency",
     "faa": "FAA Part 121/135",

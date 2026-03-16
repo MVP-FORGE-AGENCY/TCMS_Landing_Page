@@ -310,9 +310,9 @@ export function Industries() {
                   <p className="text-text-dark">{active.capability}</p>
                 </div>
                 
-                <Button href="#demo" variant="primary">
+                {/* <Button href="#demo" variant="primary">
                   {active.cta}
-                </Button>
+                </Button> */}
               </div>
               
               {/* Visual Mockup */}

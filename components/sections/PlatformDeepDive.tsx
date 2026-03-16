@@ -332,8 +332,18 @@ export function PlatformDeepDive() {
           <p className="text-xl text-white/60">{t('subtitle')}</p>
         </motion.div>
 
+        {/* Mobile helper text */}
+        <div className="flex md:hidden justify-center mb-6">
+          <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 rounded-full text-xs text-white/70 animate-pulse border border-white/10 shadow-lg">
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+            </svg>
+            Tap a module below to explore
+          </span>
+        </div>
+
         {/* Tab Navigation */}
-        <div className="flex flex-wrap justify-center gap-2 mb-12">
+        <div className="flex overflow-x-auto snap-x gap-3 mb-12 pb-4 px-4 -mx-4 md:px-0 md:mx-0 md:flex-wrap md:justify-center md:pb-0 md:overflow-visible">
           {tabs.map((tab, i) => {
             const Icon = tab.icon
             return (
@@ -342,7 +352,7 @@ export function PlatformDeepDive() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setActiveTab(i)}
-                className={`flex items-center gap-2 px-5 py-3 rounded-xl font-medium text-sm transition-all duration-300 ${
+                className={`shrink-0 snap-center md:snap-none flex items-center gap-2 px-5 py-3 rounded-xl font-medium text-sm transition-all duration-300 ${
                   activeTab === i
                     ? `bg-gradient-to-r ${tab.gradient} text-white shadow-lg`
                     : 'bg-white/5 text-white/60 hover:text-white/80 hover:bg-white/10 border border-white/10'

@@ -170,9 +170,9 @@ function FeatureCard({ feature, index }: { feature: typeof features[0]; index: n
   const Icon = feature.icon
   
   const sizeClasses = {
-    large: 'md:col-span-2 md:row-span-2',
-    medium: 'md:col-span-1 md:row-span-2',
-    small: 'md:col-span-1 md:row-span-1',
+    large: 'md:col-span-2 lg:col-span-2 md:row-span-2',
+    medium: 'md:col-span-1 lg:col-span-1 md:row-span-2',
+    small: 'md:col-span-1 lg:col-span-1 md:row-span-1',
   }
   
   return (
@@ -182,7 +182,7 @@ function FeatureCard({ feature, index }: { feature: typeof features[0]; index: n
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ delay: index * 0.1, duration: 0.5 }}
       whileHover={{ y: -8, scale: 1.02 }}
-      className={`group relative overflow-hidden rounded-3xl bg-gradient-to-br ${feature.gradient} p-6 md:p-8 ${sizeClasses[feature.size as keyof typeof sizeClasses]} cursor-pointer`}
+      className={`group relative overflow-hidden rounded-3xl bg-gradient-to-br ${feature.gradient} p-5 md:p-6 lg:p-8 ${sizeClasses[feature.size as keyof typeof sizeClasses]} cursor-pointer flex flex-col`}
     >
       {/* Hover glow effect */}
       <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -192,23 +192,25 @@ function FeatureCard({ feature, index }: { feature: typeof features[0]; index: n
       
       <div className="relative z-10 h-full flex flex-col">
         {/* Icon */}
-        <div className="w-12 h-12 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-          <Icon className="w-6 h-6 text-white" />
+        <div className="w-10 h-10 md:w-12 md:h-12 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center mb-3 md:mb-4 group-hover:scale-110 transition-transform">
+          <Icon className="w-5 h-5 md:w-6 md:h-6 text-white" />
         </div>
         
         {/* Content */}
-        <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
+        <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-white mb-2">
           {t(`${feature.id}.title`)}
         </h3>
-        <p className="text-white/80 text-sm md:text-base leading-relaxed flex-grow pb-8">
+        <p className="text-white/80 text-xs md:text-sm lg:text-base leading-relaxed flex-grow mb-3 md:mb-4">
           {t(`${feature.id}.description`)}
         </p>
         
         {/* Visual elements based on feature type */}
-        {feature.visual === 'dashboard' && <DashboardVisual />}
-        {feature.visual === 'calendar' && <CalendarVisual />}
-        {feature.visual === 'signature' && <SignatureVisual />}
-        {feature.visual === 'workflow' && <WorkflowVisual />}
+        <div className="mt-auto">
+          {feature.visual === 'dashboard' && <DashboardVisual />}
+          {feature.visual === 'calendar' && <CalendarVisual />}
+          {feature.visual === 'signature' && <SignatureVisual />}
+          {feature.visual === 'workflow' && <WorkflowVisual />}
+        </div>
       </div>
       
       {/* Decorative elements */}
@@ -222,14 +224,14 @@ export function BentoFeatures() {
   const t = useTranslations('features')
   
   return (
-    <section id="features" className="py-24 md:py-32 bg-slate-50">
-      <div className="container-lg">
+    <section id="features" className="py-16 md:py-24 lg:py-32 bg-slate-50">
+      <div className="container-lg px-4 md:px-6">
         {/* Section Header */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center max-w-3xl mx-auto mb-16"
+          className="text-center max-w-3xl mx-auto mb-12 md:mb-16"
         >
           <motion.span 
             initial={{ opacity: 0, scale: 0.9 }}
@@ -241,19 +243,19 @@ export function BentoFeatures() {
             {t('badge')}
           </motion.span>
           
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
             {t('title').split('|')[0]}
             <span className="bg-gradient-to-r from-primary to-cyan-500 bg-clip-text text-transparent">
               {t('title').split('|')[1] || ''}
             </span>
           </h2>
-          <p className="text-xl text-slate-600">
+          <p className="text-lg md:text-xl text-slate-600">
             {t('subtitle')}
           </p>
         </motion.div>
         
         {/* Bento Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 auto-rows-[200px] md:auto-rows-[180px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 auto-rows-auto md:auto-rows-[minmax(220px,auto)] lg:auto-rows-[minmax(200px,auto)]">
           {features.map((feature, index) => (
             <FeatureCard key={feature.id} feature={feature} index={index} />
           ))}

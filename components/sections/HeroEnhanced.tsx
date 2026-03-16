@@ -138,7 +138,7 @@ export function HeroEnhanced() {
                 <Sparkles className="w-3.5 h-3.5 text-white" />
               </span>
               <span className="text-sm font-medium text-white/90">
-                New: AI-Powered Compliance Predictions
+                Coming Soon: AI-Powered Compliance Predictions
               </span>
               <ArrowRight className="w-4 h-4 text-white/50 group-hover:translate-x-1 transition-transform" />
             </motion.div>

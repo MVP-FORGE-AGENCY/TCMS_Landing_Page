@@ -68,7 +68,7 @@ export function Comparison() {
             <span className="text-rose-500 line-through decoration-4">compliance</span>
           </h2>
           <p className="text-xl text-slate-600">
-            See why aviation organizations are switching to purpose-built compliance management.
+            See why organizations are switching to purpose-built compliance management.
           </p>
         </motion.div>
         
@@ -220,7 +220,7 @@ export function Comparison() {
           viewport={{ once: true }}
           className="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm"
         >
-          <div className="grid grid-cols-3 bg-slate-50 border-b border-slate-200">
+          <div className="hidden md:grid md:grid-cols-3 bg-slate-50 border-b border-slate-200">
             <div className="p-4 font-semibold text-slate-900">Feature</div>
             <div className="p-4 font-semibold text-slate-400 text-center">Spreadsheets</div>
             <div className="p-4 font-semibold text-primary text-center">CertifyCloud</div>
@@ -235,16 +235,24 @@ export function Comparison() {
               transition={{ delay: i * 0.1 }}
               onMouseEnter={() => setHoveredRow(i)}
               onMouseLeave={() => setHoveredRow(null)}
-              className={`grid grid-cols-3 border-b border-slate-100 last:border-0 transition-colors ${hoveredRow === i ? 'bg-primary/5' : ''}`}
+              className={`flex flex-col md:grid md:grid-cols-3 border-b border-slate-200 last:border-0 transition-colors ${hoveredRow === i ? 'bg-primary/5' : ''}`}
             >
-              <div className="p-4 font-medium text-slate-900">{row.feature}</div>
-              <div className="p-4 text-sm text-slate-500 text-center flex items-center justify-center gap-2">
-                <X className="w-4 h-4 text-rose-400" />
-                {row.spreadsheet}
+              <div className="p-4 font-semibold md:font-medium text-slate-900 bg-slate-50 md:bg-transparent border-b border-slate-100 md:border-none">
+                {row.feature}
               </div>
-              <div className="p-4 text-sm text-slate-700 text-center flex items-center justify-center gap-2">
-                <Check className="w-4 h-4 text-emerald-500" />
-                {row.certifycloud}
+              <div className="p-4 text-sm text-slate-600 flex flex-col md:flex-row md:items-center justify-start md:justify-center gap-1.5 md:gap-2 border-b border-slate-100 md:border-none">
+                <span className="md:hidden text-xs font-semibold text-slate-400 uppercase tracking-wider mb-1">Spreadsheets</span>
+                <div className="flex items-start md:items-center gap-2">
+                  <X className="w-5 h-5 text-rose-400 shrink-0 mt-0.5 md:mt-0" />
+                  <span className="leading-snug">{row.spreadsheet}</span>
+                </div>
+              </div>
+              <div className="p-4 text-sm text-slate-800 bg-primary/5 md:bg-transparent flex flex-col md:flex-row md:items-center justify-start md:justify-center gap-1.5 md:gap-2">
+                <span className="md:hidden text-xs font-semibold text-primary uppercase tracking-wider mb-1">CertifyCloud</span>
+                <div className="flex items-start md:items-center gap-2">
+                  <Check className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5 md:mt-0" />
+                  <span className="leading-snug font-medium md:font-normal">{row.certifycloud}</span>
+                </div>
               </div>
             </motion.div>
           ))}
