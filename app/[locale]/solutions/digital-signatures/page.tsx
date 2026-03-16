@@ -1,4 +1,5 @@
 'use client'
+import { useTranslations } from 'next-intl'
 
 import { motion } from 'framer-motion'
 import { PenTool, Shield, Tablet, Key, Lock, CheckCircle } from 'lucide-react'
@@ -6,6 +7,7 @@ import { Button } from '@/components/ui/Button'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 
 export default function DigitalSignaturesPage() {
+  const t = useTranslations('solutions')
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
@@ -49,7 +51,7 @@ export default function DigitalSignaturesPage() {
               <div className="w-16 h-16 rounded-xl bg-purple-100 flex items-center justify-center mb-6">
                 <Tablet className="w-8 h-8 text-purple-600" />
               </div>
-              <h3 className="text-h4 text-slate-900 mb-4">Canvas Pad</h3>
+              <h3 className="text-h4 text-slate-900 mb-4">{t('canvasPad')}</h3>
               <p className="text-body text-slate-600 mb-6">
                 Detailed signature capture on tablets and touch devices. Perfect for formal assessments 
                 and detailed signing during training sessions.
@@ -70,7 +72,7 @@ export default function DigitalSignaturesPage() {
               <div className="w-16 h-16 rounded-xl bg-blue-100 flex items-center justify-center mb-6">
                 <Key className="w-8 h-8 text-blue-600" />
               </div>
-              <h3 className="text-h4 text-slate-900 mb-4">PIN Authentication</h3>
+              <h3 className="text-h4 text-slate-900 mb-4">{t('pinAuth')}</h3>
               <p className="text-body text-slate-600 mb-6">
                 Quick instructor sign-offs using secure PIN codes. Fast and efficient for high-volume 
                 training sessions and routine approvals.

@@ -53,6 +53,7 @@ const tabs = [
 
 // Mock dashboard visual for each tab
 function DashboardMockup({ tabId }: { tabId: string }) {
+  const tDeepDive = useTranslations('deepDive')
   if (tabId === 'dashboard') {
     return (
       <div className="space-y-4">
@@ -97,7 +98,7 @@ function DashboardMockup({ tabId }: { tabId: string }) {
         </div>
         {/* My Actions */}
         <div className="bg-white/5 rounded-xl p-3 border border-white/10">
-          <div className="text-xs font-medium text-white/70 mb-2">My Actions</div>
+          <div className="text-xs font-medium text-white/70 mb-2">{tDeepDive("myActions")}</div>
           {[
             { text: '3 OPCs expiring in 30 days', color: 'text-amber-400', badge: 'bg-amber-500/20' },
             { text: 'Session sign-off pending', color: 'text-blue-400', badge: 'bg-blue-500/20' },
@@ -118,8 +119,8 @@ function DashboardMockup({ tabId }: { tabId: string }) {
         {/* Campaign card */}
         <div className="bg-white/5 rounded-xl p-4 border border-white/10">
           <div className="flex items-center justify-between mb-3">
-            <span className="text-sm font-medium text-white">Active Campaigns</span>
-            <span className="text-xs px-2 py-1 bg-blue-500/20 text-blue-300 rounded-full">3 active</span>
+            <span className="text-sm font-medium text-white">{tDeepDive("activeCampaigns")}</span>
+            <span className="text-xs px-2 py-1 bg-blue-500/20 text-blue-300 rounded-full">{tDeepDive("activeCount")}</span>
           </div>
           <div className="space-y-2">
             {[
@@ -148,7 +149,7 @@ function DashboardMockup({ tabId }: { tabId: string }) {
         <div className="bg-white/5 rounded-xl p-4 border border-white/10">
           <div className="flex items-center gap-2 mb-3">
             <Calendar className="w-4 h-4 text-blue-400" />
-            <span className="text-sm font-medium text-white">Auto-Scheduler</span>
+            <span className="text-sm font-medium text-white">{tDeepDive("autoScheduler")}</span>
           </div>
           <div className="grid grid-cols-5 gap-1">
             {[...Array(15)].map((_, i) => (
@@ -210,11 +211,11 @@ function DashboardMockup({ tabId }: { tabId: string }) {
         <div className="bg-white/5 rounded-xl p-4 border border-white/10">
           <div className="flex items-center gap-2 mb-2">
             <Shield className="w-4 h-4 text-violet-400" />
-            <span className="text-sm font-medium text-white">Conflict Detection</span>
+            <span className="text-sm font-medium text-white">{tDeepDive("conflictDetection")}</span>
           </div>
           <div className="flex items-center gap-2 py-2 text-xs text-emerald-400">
             <Check className="w-3.5 h-3.5" />
-            <span>No assessor conflicts detected</span>
+            <span>{tDeepDive("noConflicts")}</span>
           </div>
         </div>
       </div>
@@ -226,7 +227,7 @@ function DashboardMockup({ tabId }: { tabId: string }) {
       <div className="space-y-4">
         {/* Role hierarchy */}
         <div className="bg-white/5 rounded-xl p-4 border border-white/10">
-          <div className="text-sm font-medium text-white mb-3">RBAC Roles</div>
+          <div className="text-sm font-medium text-white mb-3">{tDeepDive("rbacRoles")}</div>
           <div className="space-y-2">
             {[
               { role: 'Admin', color: 'bg-amber-500/20 text-amber-300 border-amber-500/30' },
@@ -254,7 +255,7 @@ function DashboardMockup({ tabId }: { tabId: string }) {
   return (
     <div className="space-y-4">
       <div className="bg-white/5 rounded-xl p-4 border border-white/10">
-        <div className="text-sm font-medium text-white mb-3">Expiring Competences</div>
+        <div className="text-sm font-medium text-white mb-3">{tDeepDive("expiringCompetences")}</div>
         <div className="space-y-2">
           <div className="flex items-center justify-between text-xs">
             <span className="text-white/60">Next 30 days</span>
@@ -278,7 +279,7 @@ function DashboardMockup({ tabId }: { tabId: string }) {
       </div>
       <div className="bg-white/5 rounded-xl p-4 border border-white/10">
         <div className="flex items-center justify-between mb-3">
-          <span className="text-sm font-medium text-white">Monthly Score</span>
+          <span className="text-sm font-medium text-white">{tDeepDive("monthlyScore")}</span>
           <span className="text-2xl font-bold text-emerald-400">94%</span>
         </div>
         <div className="flex gap-2">
@@ -293,7 +294,8 @@ function DashboardMockup({ tabId }: { tabId: string }) {
   )
 }
 
-export function PlatformDeepDive() {
+export function PlatformDeepDive(props: any) {
+  const tDeepDive = useTranslations('deepDive')
   const t = useTranslations('platformDeepDive')
   const [activeTab, setActiveTab] = useState(0)
 

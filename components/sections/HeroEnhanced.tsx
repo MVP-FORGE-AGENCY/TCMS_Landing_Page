@@ -43,7 +43,8 @@ function FloatingCard({ children, className, delay = 0 }: { children: React.Reac
   )
 }
 
-export function HeroEnhanced() {
+export function HeroEnhanced(props: any) {
+  const tDashboard = useTranslations('dashboard')
   const t = useTranslations('hero')
   const { scrollY } = useScroll()
   const y1 = useTransform(scrollY, [0, 500], [0, 150])
@@ -138,7 +139,7 @@ export function HeroEnhanced() {
                 <Sparkles className="w-3.5 h-3.5 text-white" />
               </span>
               <span className="text-sm font-medium text-white/90">
-                Coming Soon: AI-Powered Compliance Predictions
+                {t('comingSoon')}
               </span>
               <ArrowRight className="w-4 h-4 text-white/50 group-hover:translate-x-1 transition-transform" />
             </motion.div>
@@ -232,22 +233,22 @@ export function HeroEnhanced() {
                       <Shield className="w-5 h-5 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-white font-semibold">Compliance Dashboard</h3>
-                      <p className="text-xs text-white/50">Real-time status</p>
+                      <h3 className="text-white font-semibold">{tDashboard("dashboardTitle")}</h3>
+                  <p className="text-xs text-white/50">{tDashboard("updatedRealTime")}</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-2">
                     <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
-                    <span className="text-xs text-emerald-400">Live</span>
+                    <span className="text-xs text-emerald-400">{tDashboard("live")}</span>
                   </div>
                 </div>
                 
                 {/* Traffic Light Cards */}
                 <div className="grid grid-cols-3 gap-3 mb-6">
                   {[
-                    { bg: 'from-emerald-500/20 to-emerald-500/10', border: 'border-emerald-500/30', color: 'text-emerald-400', count: 247, label: 'Valid', icon: '✓' },
-                    { bg: 'from-amber-500/20 to-amber-500/10', border: 'border-amber-500/30', color: 'text-amber-400', count: 12, label: 'Expiring', icon: '⚠' },
-                    { bg: 'from-red-500/20 to-red-500/10', border: 'border-red-500/30', color: 'text-red-400', count: 0, label: 'Expired', icon: '✕' },
+                    { bg: 'from-emerald-500/20 to-emerald-500/10', border: 'border-emerald-500/30', color: 'text-emerald-400', count: 247, label: tDashboard('valid'), icon: '✓' },
+                    { bg: 'from-amber-500/20 to-amber-500/10', border: 'border-amber-500/30', color: 'text-amber-400', count: 12, label: tDashboard('expiring'), icon: '⚠' },
+                    { bg: 'from-red-500/20 to-red-500/10', border: 'border-red-500/30', color: 'text-red-400', count: 0, label: tDashboard('expired'), icon: '✕' },
                   ].map((item, idx) => (
                     <motion.div
                       key={item.label}
@@ -267,8 +268,8 @@ export function HeroEnhanced() {
                 {/* Mini Chart Placeholder */}
                 <div className="bg-white/5 rounded-xl p-4 border border-white/5">
                   <div className="flex items-center justify-between mb-3">
-                    <span className="text-sm text-white/70">Compliance Trend</span>
-                    <span className="text-xs text-emerald-400">↑ 12% this month</span>
+                    <span className="text-sm text-white/70">{tDashboard("complianceTrend")}</span>
+                    <span className="text-xs text-emerald-400">{tDashboard("trendThisMonth")}</span>
                   </div>
                   <div className="flex items-end gap-1 h-16">
                     {[40, 65, 55, 80, 70, 90, 85, 95, 88, 98, 92, 99].map((h, i) => (
@@ -295,8 +296,8 @@ export function HeroEnhanced() {
                   <Check className="w-5 h-5 text-emerald-600" />
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-slate-900">Audit Passed</p>
-                  <p className="text-xs text-slate-500">EASA inspection complete</p>
+                  <p className="text-sm font-semibold text-slate-900">{tDashboard("auditPassed")}</p>
+                  <p className="text-xs text-slate-500">{tDashboard("easaInspection")}</p>
                 </div>
               </div>
             </FloatingCard>
@@ -310,8 +311,8 @@ export function HeroEnhanced() {
                   <Zap className="w-5 h-5 text-blue-600" />
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-slate-900">15 hrs saved</p>
-                  <p className="text-xs text-slate-500">This week vs manual tracking</p>
+                  <p className="text-sm font-semibold text-slate-900">{tDashboard("hrsSaved")}</p>
+                  <p className="text-xs text-slate-500">{tDashboard("thisWeek")}</p>
                 </div>
               </div>
             </FloatingCard>
@@ -326,12 +327,12 @@ export function HeroEnhanced() {
           className="mt-20 flex flex-wrap justify-center gap-4"
         >
           {[
-            { label: 'Digital Signatures', icon: '✍️', delay: 0 },
-            { label: 'Smart Scheduling', icon: '📅', delay: 0.1 },
-            { label: 'Audit Reports', icon: '📋', delay: 0.2 },
-            { label: 'Proficiency Checks', icon: '✅', delay: 0.3 },
-            { label: 'Expiry Tracking', icon: '⏰', delay: 0.4 },
-            { label: 'RBAC Security', icon: '🔒', delay: 0.5 },
+            { label: t('capabilityPills.digitalSignatures'), icon: '✍️', delay: 0 },
+            { label: t('capabilityPills.smartScheduling'), icon: '📅', delay: 0.1 },
+            { label: t('capabilityPills.auditReports'), icon: '📋', delay: 0.2 },
+            { label: t('capabilityPills.proficiencyChecks'), icon: '✅', delay: 0.3 },
+            { label: t('capabilityPills.expiryTracking'), icon: '⏰', delay: 0.4 },
+            { label: t('capabilityPills.rbacSecurity'), icon: '🔒', delay: 0.5 },
           ].map((pill) => (
             <motion.div
               key={pill.label}
@@ -357,7 +358,7 @@ export function HeroEnhanced() {
           transition={{ duration: 2, repeat: Infinity }}
           className="flex flex-col items-center gap-2"
         >
-          <span className="text-xs text-white/40">Scroll to explore</span>
+          <span className="text-xs text-white/40">{tDashboard("scrollToExplore")}</span>
           <div className="w-6 h-10 border-2 border-white/20 rounded-full flex items-start justify-center p-2">
             <motion.div 
               animate={{ y: [0, 8, 0] }}

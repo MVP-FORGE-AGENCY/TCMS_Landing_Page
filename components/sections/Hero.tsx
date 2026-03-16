@@ -40,7 +40,7 @@ export function Hero() {
               className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-primary mb-6"
             >
               <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-              <span className="text-sm font-medium">Aviation Compliance Platform</span>
+              <span className="text-sm font-medium">{t("badge")}</span>
             </motion.div>
             
             <h1 className="text-display-sm md:text-display text-white mb-6 leading-tight">
@@ -165,7 +165,7 @@ export function Hero() {
                 <span className="text-sm font-semibold text-slate-900">{tDashboard('digitalSignature')}</span>
               </div>
               <div className="mt-2 w-24 h-10 border-2 border-dashed border-slate-300 rounded flex items-center justify-center">
-                <span className="text-xs text-slate-400">Sign here</span>
+                <span className="text-xs text-slate-400">{t("signHere")}</span>
               </div>
             </motion.div>
           </motion.div>

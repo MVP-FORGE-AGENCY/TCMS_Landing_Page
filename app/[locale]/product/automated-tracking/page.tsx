@@ -1,4 +1,5 @@
 'use client'
+import { useTranslations } from 'next-intl'
 
 import { motion } from 'framer-motion'
 import { Zap, Clock, Mail, Calendar, CheckCircle } from 'lucide-react'
@@ -6,6 +7,7 @@ import { Button } from '@/components/ui/Button'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 
 export default function AutomatedTrackingPage() {
+  const t = useTranslations('product')
   return (
     <div className="min-h-screen bg-white">
       <section className="relative pt-32 pb-20 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white overflow-hidden">
@@ -60,7 +62,7 @@ export default function AutomatedTrackingPage() {
                 <div className="flex gap-4">
                   <Calendar className="w-8 h-8 text-primary" />
                   <div>
-                    <h3 className="text-h5 text-slate-900 mb-2">Auto-Calculation</h3>
+                    <h3 className="text-h5 text-slate-900 mb-2">{t('autoCalc')}</h3>
                     <p className="text-body text-slate-600">
                       Validity periods set once. System automatically calculates &quot;Valid Until&quot; dates 
                       based on completion dates.
@@ -71,7 +73,7 @@ export default function AutomatedTrackingPage() {
             </div>
 
             <div className="bg-slate-50 rounded-card p-8 border border-slate-200">
-              <h3 className="text-h4 text-slate-900 mb-6">Notification Schedule</h3>
+              <h3 className="text-h4 text-slate-900 mb-6">{t('notifSchedule')}</h3>
               <div className="space-y-4">
                 {[
                   { days: 90, color: 'blue', status: 'Informational' },

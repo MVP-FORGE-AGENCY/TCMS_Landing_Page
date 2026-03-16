@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useTranslations } from 'next-intl'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X, Calendar, Clock, User, Mail, Building, Phone, Check, ChevronLeft, ChevronRight } from 'lucide-react'
 
@@ -22,6 +23,7 @@ const demoTypes = [
 ]
 
 export function ScheduleDemoModal({ isOpen, onClose }: ScheduleDemoModalProps) {
+  const t = useTranslations('scheduleDemo')
   const [step, setStep] = useState(1)
   const [selectedDate, setSelectedDate] = useState<Date | null>(null)
   const [selectedTime, setSelectedTime] = useState<string | null>(null)
@@ -102,8 +104,8 @@ export function ScheduleDemoModal({ isOpen, onClose }: ScheduleDemoModalProps) {
             {/* Header */}
             <div className="flex items-center justify-between p-6 border-b border-slate-100">
               <div>
-                <h2 className="text-2xl font-bold text-slate-900">Schedule Your Demo</h2>
-                <p className="text-sm text-slate-500 mt-1">Book a personalized walkthrough</p>
+                <h2 className="text-2xl font-bold text-slate-900">{t("title")}</h2>
+                <p className="text-sm text-slate-500 mt-1">{t("subtitle")}</p>
               </div>
               <button
                 onClick={resetAndClose}
@@ -145,7 +147,7 @@ export function ScheduleDemoModal({ isOpen, onClose }: ScheduleDemoModalProps) {
                     exit={{ opacity: 0, x: -20 }}
                     className="space-y-4"
                   >
-                    <h3 className="text-lg font-semibold text-slate-900 mb-4">What type of demo would you like?</h3>
+                    <h3 className="text-lg font-semibold text-slate-900 mb-4">{t("whatType")}</h3>
                     {demoTypes.map((demo) => (
                       <button
                         key={demo.id}
@@ -182,7 +184,7 @@ export function ScheduleDemoModal({ isOpen, onClose }: ScheduleDemoModalProps) {
                     <div className="grid md:grid-cols-2 gap-6">
                       {/* Calendar */}
                       <div>
-                        <h3 className="text-lg font-semibold text-slate-900 mb-4">Select a Date</h3>
+                        <h3 className="text-lg font-semibold text-slate-900 mb-4">{t("selectDate")}</h3>
                         <div className="bg-slate-50 rounded-xl p-4">
                           {/* Month navigation */}
                           <div className="flex items-center justify-between mb-4">
@@ -271,11 +273,11 @@ export function ScheduleDemoModal({ isOpen, onClose }: ScheduleDemoModalProps) {
                     exit={{ opacity: 0, x: -20 }}
                     className="space-y-4"
                   >
-                    <h3 className="text-lg font-semibold text-slate-900 mb-4">Your Details</h3>
+                    <h3 className="text-lg font-semibold text-slate-900 mb-4">{t("yourDetails")}</h3>
                     
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-sm font-medium text-slate-700 mb-1">Full Name *</label>
+                        <label className="block text-sm font-medium text-slate-700 mb-1">{t("name")} *</label>
                         <div className="relative">
                           <User className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
                           <input
@@ -283,13 +285,13 @@ export function ScheduleDemoModal({ isOpen, onClose }: ScheduleDemoModalProps) {
                             value={formData.name}
                             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                             className="w-full pl-10 pr-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none"
-                            placeholder="John Smith"
+                            placeholder={t("namePlaceholder")}
                           />
                         </div>
                       </div>
                       
                       <div>
-                        <label className="block text-sm font-medium text-slate-700 mb-1">Work Email *</label>
+                        <label className="block text-sm font-medium text-slate-700 mb-1">{t("email")} *</label>
                         <div className="relative">
                           <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
                           <input
@@ -297,13 +299,13 @@ export function ScheduleDemoModal({ isOpen, onClose }: ScheduleDemoModalProps) {
                             value={formData.email}
                             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                             className="w-full pl-10 pr-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none"
-                            placeholder="john@company.com"
+                            placeholder={t("emailPlaceholder")}
                           />
                         </div>
                       </div>
                       
                       <div>
-                        <label className="block text-sm font-medium text-slate-700 mb-1">Company *</label>
+                        <label className="block text-sm font-medium text-slate-700 mb-1">{t("company")} *</label>
                         <div className="relative">
                           <Building className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
                           <input
@@ -311,13 +313,13 @@ export function ScheduleDemoModal({ isOpen, onClose }: ScheduleDemoModalProps) {
                             value={formData.company}
                             onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                             className="w-full pl-10 pr-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none"
-                            placeholder="Acme Airlines"
+                            placeholder={t("companyPlaceholder")}
                           />
                         </div>
                       </div>
                       
                       <div>
-                        <label className="block text-sm font-medium text-slate-700 mb-1">Phone</label>
+                        <label className="block text-sm font-medium text-slate-700 mb-1">{t("phone")}</label>
                         <div className="relative">
                           <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
                           <input
@@ -332,7 +334,7 @@ export function ScheduleDemoModal({ isOpen, onClose }: ScheduleDemoModalProps) {
                     </div>
                     
                     <div>
-                      <label className="block text-sm font-medium text-slate-700 mb-1">Number of Employees</label>
+                      <label className="block text-sm font-medium text-slate-700 mb-1">{t("numEmployees")}</label>
                       <select
                         value={formData.employees}
                         onChange={(e) => setFormData({ ...formData, employees: e.target.value })}
@@ -359,7 +361,7 @@ export function ScheduleDemoModal({ isOpen, onClose }: ScheduleDemoModalProps) {
                     <div className="w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6">
                       <Check className="w-10 h-10 text-emerald-600" />
                     </div>
-                    <h3 className="text-2xl font-bold text-slate-900 mb-2">Demo Scheduled!</h3>
+                    <h3 className="text-2xl font-bold text-slate-900 mb-2">{t("scheduled")}</h3>
                     <p className="text-slate-600 mb-6">
                       We&apos;ve sent a calendar invite to {formData.email}
                     </p>

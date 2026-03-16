@@ -42,12 +42,12 @@ export function Dashboard() {
                 {/* Dashboard Header */}
                 <div className="flex items-center justify-between mb-6">
                   <div>
-                    <h3 className="text-xl font-bold text-white mb-1">Fleet Readiness</h3>
-                    <p className="text-xs text-white/60">Updated in real-time</p>
+                    <h3 className="text-xl font-bold text-white mb-1">{t("fleetReadiness")}</h3>
+                    <p className="text-xs text-white/60">{t("updatedRealTime")}</p>
                   </div>
                   <div className="flex items-center gap-2">
                     <select className="bg-white/10 border border-white/10 rounded-md px-2 py-1 text-xs text-white/80 appearance-none cursor-pointer">
-                      <option>All Departments</option>
+                      <option>{t("allDepartments")}</option>
                     </select>
                   </div>
                 </div>
@@ -55,9 +55,9 @@ export function Dashboard() {
                 {/* Traffic Light Cards */}
                 <div className="flex justify-center gap-6 mb-6">
                   {[
-                    { color: 'bg-success', value: '94%', label: 'Compliant' },
-                    { color: 'bg-warning', value: '5%', label: 'Expiring' },
-                    { color: 'bg-danger', value: '1%', label: 'Action Required' },
+                    { color: 'bg-success', value: '94%', label: t('compliant') },
+                  { color: 'bg-warning', value: '5%', label: t('expiring') },
+                  { color: 'bg-danger', value: '1%', label: t('actionRequired') },
                   ].map((stat) => (
                     <div key={stat.label} className="text-center">
                       <div className={`w-20 h-20 ${stat.color} rounded-2xl flex items-center justify-center mb-2 shadow-lg`}>
@@ -71,8 +71,8 @@ export function Dashboard() {
                 {/* Compliance trend chart */}
                 <div className="bg-white/5 rounded-xl p-4 border border-white/5 mb-4">
                   <div className="flex items-center justify-between mb-3">
-                    <span className="text-xs text-white/70">Compliance Trend</span>
-                    <span className="text-xs text-emerald-400">↑ 12% this month</span>
+                    <span className="text-xs text-white/70">{t("complianceTrend")}</span>
+                    <span className="text-xs text-emerald-400">{t("trendThisMonth")}</span>
                   </div>
                   <div className="flex items-end justify-center gap-1 h-16">
                     {[40, 65, 45, 80, 55, 70, 60, 85, 75, 90, 80, 95].map((h, i) => (
@@ -92,12 +92,12 @@ export function Dashboard() {
                 <div className="bg-white/5 rounded-xl p-3 border border-white/5">
                   <div className="text-xs font-medium text-white/70 mb-2 flex items-center gap-1.5">
                     <Bell className="w-3 h-3" />
-                    My Actions
+                    {t('myActions')}
                   </div>
                   <div className="space-y-1.5">
                     {[
-                      { icon: AlertTriangle, text: '3 OPCs expiring within 30 days', color: 'text-amber-400' },
-                      { icon: Shield, text: 'Pending protocol sign-off', color: 'text-blue-400' },
+                      { icon: AlertTriangle, text: t('opcExpiring30Days'), color: 'text-amber-400' },
+                      { icon: Shield, text: t('pendingSignOff'), color: 'text-blue-400' },
                     ].map((action) => {
                       const ActionIcon = action.icon
                       return (
@@ -120,7 +120,7 @@ export function Dashboard() {
               transition={{ delay: 0.5 }}
               className="absolute -top-4 -right-4 bg-white rounded-lg px-3 py-2 shadow-lg border-2 border-primary text-xs font-semibold"
             >
-              Real-time updates
+              {t('realTimeUpdates')}
             </motion.div>
             
             <motion.div
@@ -131,7 +131,7 @@ export function Dashboard() {
               className="absolute -bottom-4 -left-4 bg-white rounded-lg px-3 py-2 shadow-lg border-2 border-success text-xs font-semibold flex items-center gap-1.5"
             >
               <Shield className="w-3.5 h-3.5 text-emerald-500" />
-              Protocol Verified ✓
+              {t('protocolVerified')}
             </motion.div>
           </motion.div>
         </div>

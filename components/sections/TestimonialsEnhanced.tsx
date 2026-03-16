@@ -248,7 +248,7 @@ export function TestimonialsEnhanced() {
               <div className="absolute inset-0 rounded-full bg-primary animate-ping opacity-20" />
             </div>
             <div className="text-left">
-              <div className="font-semibold text-white text-lg">Watch Customer Stories</div>
+              <div className="font-semibold text-white text-lg">{t("watchStories")}</div>
               <div className="text-white/60">See how SkyWings Airlines achieved 100% compliance</div>
             </div>
           </div>

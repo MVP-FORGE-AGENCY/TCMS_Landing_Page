@@ -1,4 +1,5 @@
 'use client'
+import { useTranslations } from 'next-intl'
 
 import { motion } from 'framer-motion'
 import { ClipboardCheck, Users, AlertTriangle, CheckCircle } from 'lucide-react'
@@ -6,6 +7,7 @@ import { Button } from '@/components/ui/Button'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 
 export default function LPCOPCManagementPage() {
+  const t = useTranslations('product')
   return (
     <div className="min-h-screen bg-white">
       <section className="relative pt-32 pb-20 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white overflow-hidden">
@@ -36,7 +38,7 @@ export default function LPCOPCManagementPage() {
           <div className="max-w-3xl mx-auto bg-red-50 border-l-4 border-red-500 rounded-lg p-6 mb-8">
             <div className="flex items-center gap-3 mb-2">
               <AlertTriangle className="w-6 h-6 text-red-600" />
-              <h3 className="text-h5 text-red-800">Conflict Detected</h3>
+              <h3 className="text-h5 text-red-800">{t('conflictDetected')}</h3>
             </div>
             <p className="text-body text-red-700">
               Cannot schedule assessor &quot;John Smith&quot; to check themselves or their direct reports. 
@@ -46,7 +48,7 @@ export default function LPCOPCManagementPage() {
 
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-slate-50 rounded-card p-6 border border-slate-200">
-              <h3 className="text-h5 text-slate-900 mb-4">Element Grading</h3>
+              <h3 className="text-h5 text-slate-900 mb-4">{t('elementGrading')}</h3>
               <div className="space-y-3">
                 {[
                   { element: 'Engine Failure on Takeoff', grade: 4 },
@@ -62,7 +64,7 @@ export default function LPCOPCManagementPage() {
             </div>
 
             <div className="bg-slate-50 rounded-card p-6 border border-slate-200">
-              <h3 className="text-h5 text-slate-900 mb-4">Retake Workflow</h3>
+              <h3 className="text-h5 text-slate-900 mb-4">{t('retakeWorkflow')}</h3>
               <div className="space-y-3">
                 <div className="flex items-center gap-2 text-sm">
                   <div className="w-2 h-2 rounded-full bg-red-500" />

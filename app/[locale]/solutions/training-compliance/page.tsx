@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/Button'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 
 export default function TrainingCompliancePage() {
+  const tSolutions = useTranslations('solutions')
   const t = useTranslations('trainingCompliance')
 
   const problems = [
@@ -159,24 +160,24 @@ export default function TrainingCompliancePage() {
                   <div className="space-y-4">
                     <div className="bg-emerald-50 border-l-4 border-emerald-500 rounded-lg p-4">
                       <div className="flex items-center justify-between mb-2">
-                        <span className="text-sm font-semibold text-emerald-800">Valid</span>
-                        <span className="text-xs text-emerald-600">142 records</span>
+                        <span className="text-sm font-semibold text-emerald-800">{tSolutions('valid')}</span>
+                        <span className="text-xs text-emerald-600">{tSolutions('records142')}</span>
                       </div>
                       <div className="text-xs text-slate-600">All qualifications current</div>
                     </div>
                     <div className="bg-amber-50 border-l-4 border-amber-500 rounded-lg p-4">
                       <div className="flex items-center justify-between mb-2">
-                        <span className="text-sm font-semibold text-amber-800">Expiring Soon</span>
+                        <span className="text-sm font-semibold text-amber-800">{tSolutions('expiringSoon')}</span>
                         <span className="text-xs text-amber-600">8 records</span>
                       </div>
                       <div className="text-xs text-slate-600">Renewal due in 30-90 days</div>
                     </div>
                     <div className="bg-red-50 border-l-4 border-red-500 rounded-lg p-4">
                       <div className="flex items-center justify-between mb-2">
-                        <span className="text-sm font-semibold text-red-800">Expired</span>
+                        <span className="text-sm font-semibold text-red-800">{tSolutions('expired')}</span>
                         <span className="text-xs text-red-600">0 records</span>
                       </div>
-                      <div className="text-xs text-slate-600">Action required immediately</div>
+                      <div className="text-xs text-slate-600">{tSolutions('actionRequired')}</div>
                     </div>
                   </div>
                 </div>

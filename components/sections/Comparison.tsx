@@ -2,6 +2,7 @@
 
 import { motion, useInView } from 'framer-motion'
 import { useRef, useState } from 'react'
+import { useTranslations } from 'next-intl'
 import { Check, X, ArrowRight, Sparkles } from 'lucide-react'
 
 const comparisonData = [
@@ -43,7 +44,8 @@ const stats = [
   { before: '12%', after: '0%', label: 'Missed expirations' },
 ]
 
-export function Comparison() {
+export function Comparison(props: any) {
+  const t = useTranslations('comparison')
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
   const [hoveredRow, setHoveredRow] = useState<number | null>(null)
@@ -65,7 +67,7 @@ export function Comparison() {
           
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
             Spreadsheets weren&apos;t built for{' '}
-            <span className="text-rose-500 line-through decoration-4">compliance</span>
+            <span className="text-rose-500 line-through decoration-4">{t("title")}</span>
           </h2>
           <p className="text-xl text-slate-600">
             See why organizations are switching to purpose-built compliance management.
@@ -90,27 +92,27 @@ export function Comparison() {
                 <span className="text-3xl">📊</span>
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-slate-900">Spreadsheets</h3>
-                <p className="text-slate-500">Manual, error-prone, outdated</p>
+                <h3 className="text-2xl font-bold text-slate-900">{t("spreadsheets.title")}</h3>
+                <p className="text-slate-500">{t("spreadsheets.subtitle")}</p>
               </div>
             </div>
             
             {/* Fake spreadsheet visual */}
             <div className="bg-white rounded-xl p-4 border border-slate-200 mb-6">
               <div className="grid grid-cols-4 gap-2 text-xs">
-                <div className="bg-slate-100 p-2 font-medium">Name</div>
-                <div className="bg-slate-100 p-2 font-medium">Cert Type</div>
-                <div className="bg-slate-100 p-2 font-medium">Expiry</div>
-                <div className="bg-slate-100 p-2 font-medium">Status</div>
+                <div className="bg-slate-100 p-2 font-medium">{t("table.name")}</div>
+                <div className="bg-slate-100 p-2 font-medium">{t("table.certType")}</div>
+                <div className="bg-slate-100 p-2 font-medium">{t("table.expiry")}</div>
+                <div className="bg-slate-100 p-2 font-medium">{t("table.status")}</div>
                 
-                <div className="p-2 text-slate-600">J. Smith</div>
-                <div className="p-2 text-slate-600">LPC</div>
-                <div className="p-2 text-red-500">EXPIRED!</div>
+                <div className="p-2 text-slate-600">{t("jSmith")}</div>
+                <div className="p-2 text-slate-600">{t("lpc")}</div>
+                <div className="p-2 text-red-500">{t("expiredAlert")}</div>
                 <div className="p-2">❌</div>
                 
-                <div className="p-2 text-slate-600">A. Jones</div>
-                <div className="p-2 text-slate-600">OPC</div>
-                <div className="p-2 text-slate-600">???</div>
+                <div className="p-2 text-slate-600">{t("aJones")}</div>
+                <div className="p-2 text-slate-600">{t("opc")}</div>
+                <div className="p-2 text-slate-600">{t("unknown")}</div>
                 <div className="p-2">⚠️</div>
               </div>
               <div className="mt-3 p-2 bg-amber-50 border border-amber-200 rounded text-xs text-amber-700">
@@ -145,8 +147,8 @@ export function Comparison() {
                 <Sparkles className="w-8 h-8" />
               </div>
               <div>
-                <h3 className="text-2xl font-bold">CertifyCloud</h3>
-                <p className="text-white/70">Automated, accurate, always current</p>
+                <h3 className="text-2xl font-bold">{t("certifycloud.title")}</h3>
+                <p className="text-white/70">{t("certifycloud.subtitle")}</p>
               </div>
             </div>
             
@@ -221,9 +223,9 @@ export function Comparison() {
           className="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm"
         >
           <div className="hidden md:grid md:grid-cols-3 bg-slate-50 border-b border-slate-200">
-            <div className="p-4 font-semibold text-slate-900">Feature</div>
-            <div className="p-4 font-semibold text-slate-400 text-center">Spreadsheets</div>
-            <div className="p-4 font-semibold text-primary text-center">CertifyCloud</div>
+            <div className="p-4 font-semibold text-slate-900">{t("table.feature")}</div>
+            <div className="p-4 font-semibold text-slate-400 text-center">{t("spreadsheets.title")}</div>
+            <div className="p-4 font-semibold text-primary text-center">{t("certifycloud.title")}</div>
           </div>
           
           {comparisonData.map((row, i) => (
@@ -241,14 +243,14 @@ export function Comparison() {
                 {row.feature}
               </div>
               <div className="p-4 text-sm text-slate-600 flex flex-col md:flex-row md:items-center justify-start md:justify-center gap-1.5 md:gap-2 border-b border-slate-100 md:border-none">
-                <span className="md:hidden text-xs font-semibold text-slate-400 uppercase tracking-wider mb-1">Spreadsheets</span>
+                <span className="md:hidden text-xs font-semibold text-slate-400 uppercase tracking-wider mb-1">{t("spreadsheets.title")}</span>
                 <div className="flex items-start md:items-center gap-2">
                   <X className="w-5 h-5 text-rose-400 shrink-0 mt-0.5 md:mt-0" />
                   <span className="leading-snug">{row.spreadsheet}</span>
                 </div>
               </div>
               <div className="p-4 text-sm text-slate-800 bg-primary/5 md:bg-transparent flex flex-col md:flex-row md:items-center justify-start md:justify-center gap-1.5 md:gap-2">
-                <span className="md:hidden text-xs font-semibold text-primary uppercase tracking-wider mb-1">CertifyCloud</span>
+                <span className="md:hidden text-xs font-semibold text-primary uppercase tracking-wider mb-1">{t("certifycloud.title")}</span>
                 <div className="flex items-start md:items-center gap-2">
                   <Check className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5 md:mt-0" />
                   <span className="leading-snug font-medium md:font-normal">{row.certifycloud}</span>

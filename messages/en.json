@@ -51,7 +51,18 @@
     "ctaSecondary": "See How It Works",
     "trust1": "EASA ADR.OR.D.017 Compliant",
     "trust2": "Setup in 7 days",
-    "trust3": "No credit card required"
+    "trust3": "No credit card required",
+    "badge": "Aviation Compliance Platform",
+    "signHere": "Sign here",
+    "comingSoon": "Coming Soon: AI-Powered Compliance Predictions",
+    "capabilityPills": {
+      "digitalSignatures": "Digital Signatures",
+      "smartScheduling": "Smart Scheduling",
+      "auditReports": "Audit Reports",
+      "proficiencyChecks": "Proficiency Checks",
+      "expiryTracking": "Expiry Tracking",
+      "rbacSecurity": "RBAC Security"
+    }
   },
   "problem": {
     "title": "The Hidden Costs of Manual Training Compliance",
@@ -103,7 +114,12 @@
     "security": {
       "title": "Enterprise Security",
       "description": "RBAC (5 roles), RLS tenant isolation, audit trail (~50 semantic actions), password expiry, auditor read-only mode."
-    }
+    },
+    "valid": "Valid",
+    "expiring": "Expiring",
+    "expired": "Expired",
+    "verified": "Verified",
+    "workflowSteps": ["Check", "Evaluate", "Sign", "Finalize"]
   },
   "dashboard": {
     "title": "See Who's Compliant at a Glance",
@@ -116,7 +132,25 @@
     "expired": "Expired",
     "expiryAlert": "Expiry Alert",
     "expiryText": "3 qualifications expiring",
-    "digitalSignature": "Digital Signature"
+    "digitalSignature": "Digital Signature",
+    "fleetReadiness": "Fleet Readiness",
+    "updatedRealTime": "Updated in real-time",
+    "allDepartments": "All Departments",
+    "complianceTrend": "Compliance Trend",
+    "live": "Live",
+    "auditPassed": "Audit Passed",
+    "easaInspection": "EASA inspection complete",
+    "hrsSaved": "15 hrs saved",
+    "thisWeek": "This week vs manual tracking",
+    "scrollToExplore": "Scroll to explore",
+    "myActions": "My Actions",
+    "realTimeUpdates": "Real-time updates",
+    "protocolVerified": "Protocol Verified ✓",
+    "compliant": "Compliant",
+    "actionRequired": "Action Required",
+    "trendThisMonth": "↑ 12% this month",
+    "opcExpiring30Days": "3 OPCs expiring within 30 days",
+    "pendingSignOff": "Pending protocol sign-off"
   },
   "benefits": {
     "title": "Why Aviation Organizations Choose CertifyCloud",
@@ -210,7 +244,21 @@
       "cta": "See Healthcare Demo"
     },
     "useCases": "Use Cases:",
-    "featuredCapability": "Featured Capability"
+    "featuredCapability": "Featured Capability",
+    "go": "GO",
+    "part145": "Part-145 Maintenance",
+    "lineMaint": "Line Maint.",
+    "easaFaa": "EASA/FAA compliance",
+    "fleetReadiness": "Fleet Readiness: B737",
+    "liveLpcOpc": "Live LPC/OPC Status",
+    "studentProgression": "Student Progression",
+    "classId": "Class 2026-A (CPL/IR)",
+    "safetyCompliance": "Safety & Security Compliance",
+    "auditRequired": "Audit Required",
+    "locationCompliant": "Compliant",
+    "groundPhases": ["Ground School", "Simulator (FNPT II)", "Flight Phase"],
+    "groundPhaseStatuses": ["Completed", "In Progress (8/12)", "Pending"],
+    "crewChecks": ["OPC Valid", "LPC Expiring", "Line Check"]
   },
   "video": {
     "title": "See CertifyCloud in Action (2:30)",
@@ -294,7 +342,15 @@
       "feature2": "One-click PDF dossier generation with complete audit trail and digital signatures",
       "feature3": "Monthly compliance score with risk-level classification (Green/Amber/Red)",
       "feature4": "Print and CSV export controls for customized regulatory reporting"
-    }
+    },
+    "tapToExplore": "Tap a module below to explore",
+    "trendThisMonth": "↑ 12% this month",
+    "opcLpcWorkflow": "OPC/LPC Workflow",
+    "workflowSteps": ["Initiated", "Evaluate", "Sign", "Finalize"],
+    "roles": ["Admin", "Training Manager", "Instructor", "Auditor (Read-Only)", "Employee"],
+    "next30Days": "Next 30 days",
+    "dayWindows": ["0 days", "30 days", "60 days", "90 days"],
+    "items12": "12 items"
   },
   "faq": {
     "title": "Frequently Asked Questions",
@@ -339,7 +395,17 @@
     "trust1": "Setup in 7 days",
     "trust2": "No credit card required",
     "trust3": "Free data migration included",
-    "trust4": "Cancel anytime"
+    "trust4": "Cancel anytime",
+    "digitalSeal": "Digital Seal",
+    "shaVerified": "SHA-256 Verified",
+    "qrGenerated": "QR Code Generated",
+    "autoScheduler": "Auto-Scheduler",
+    "batchSessions": "Batch Sessions",
+    "sessionsPlanned": "12 sessions planned",
+    "smartAlerts": "Smart Alerts",
+    "expiryMonitor": "Expiry Monitor",
+    "expiringIn30Days": "3 expiring in 30 days",
+    "allInOneBadge": "All-in-one aviation compliance platform"
   },
   "footer": {
     "tagline": "Compliance Without Complexity",
@@ -353,6 +419,141 @@
     "legal": "Legal",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
-    "gdpr": "GDPR Compliance"
+    "gdpr": "GDPR Compliance",
+    "welcomeEmail": "Check your inbox for a welcome email.",
+    "certifyCloud": "CertifyCloud",
+    "company": "Company"
+  },
+  "scheduleDemo": {
+    "title": "Schedule Your Demo",
+    "subtitle": "Book a personalized walkthrough",
+    "whatType": "What type of demo would you like?",
+    "selectDate": "Select a Date",
+    "yourDetails": "Your Details",
+    "phone": "Phone",
+    "numEmployees": "Number of Employees",
+    "scheduled": "Demo Scheduled!",
+    "name": "Name",
+    "namePlaceholder": "John Doe",
+    "email": "Email",
+    "emailPlaceholder": "john@airline.com",
+    "company": "Company",
+    "companyPlaceholder": "Airline/MRO Name",
+    "bookDemo": "Book Demo"
+  },
+  "floatingElements": {
+    "bookDemo": "Book Free Demo",
+    "demo": "Demo",
+    "support": "CertifyCloud Support",
+    "justNow": "Just now"
+  },
+  "testimonials": {
+    "watchStories": "Watch Customer Stories"
+  },
+  "comparisonSection": {
+    "badge": "Stop the Spreadsheet Madness",
+    "headingPrefix": "Spreadsheets weren't built for",
+    "headingDesc": "See why organizations are switching to purpose-built compliance management.",
+    "oldWay": "The Old Way",
+    "certifyCloudWay": "The CertifyCloud Way",
+    "lastUpdated": "Last updated: 3 weeks ago (who updated this?)",
+    "liveAutoUpdated": "Live • Auto-updated",
+    "hundredPercent": "100% Compliant",
+    "makeSwitch": "Make the Switch Today",
+    "freeMigration": "Free data migration included • Setup in 7 days",
+    "pains": ["Version conflicts", "No audit trail", "Manual calculations", "Easy to miss deadlines"],
+    "benefits": ["Real-time visibility", "Complete audit trail", "Automatic calculations", "Smart expiry alerts"],
+    "statWeeklyAdmin": "Weekly admin time",
+    "statAuditPrep": "Audit preparation",
+    "statMissedExp": "Missed expirations"
+  },
+  "comparison": {
+    "title": "compliance",
+    "spreadsheets": {
+      "title": "Spreadsheets",
+      "subtitle": "Manual, error-prone, outdated"
+    },
+    "certifycloud": {
+      "title": "CertifyCloud",
+      "subtitle": "Automated, accurate, always current"
+    },
+    "table": {
+      "name": "Name",
+      "certType": "Cert Type",
+      "expiry": "Expiry",
+      "status": "Status",
+      "feature": "Feature"
+    },
+    "jSmith": "J. Smith",
+    "lpc": "LPC",
+    "expiredAlert": "EXPIRED!",
+    "aJones": "A. Jones",
+    "opc": "OPC",
+    "unknown": "???"
+  },
+  "solutions": {
+    "trainingCompliance": {
+      "title": "Training Compliance",
+      "header": "Automated Tracking"
+    },
+    "proficiencyChecks": {
+      "title": "Proficiency Checks",
+      "header": "LPC/OPC management"
+    },
+    "digitalSignatures": {
+      "title": "Digital Signatures",
+      "header": "Canvas Pad"
+    },
+    "auditReporting": {
+      "title": "Audit Reporting",
+      "header": "Compliance Reports"
+    },
+    "valid": "Valid",
+    "expiringSoon": "Expiring Soon",
+    "expired": "Expired",
+    "records142": "142 records",
+    "actionRequired": "Action required immediately",
+    "canvasPad": "Canvas Pad",
+    "pinAuth": "PIN Authentication"
+  },
+  "product": {
+    "trafficLightDashboard": {
+      "title": "Traffic Light Dashboard",
+      "header": "See Compliance Status Instantly"
+    },
+    "complianceReports": {
+      "title": "Compliance Reports",
+      "header": "Filtered Results"
+    },
+    "automatedTracking": {
+      "title": "Automated Tracking",
+      "header": "Auto-Calculation"
+    },
+    "lpcOpcManagement": {
+      "title": "LPC/OPC Management",
+      "header": "Notification Schedule"
+    },
+    "paperlessWorkflow": {
+      "title": "Paperless Workflow",
+      "header": "Retake Workflow"
+    },
+    "filteredResults": "Filtered Results",
+    "seeCompliance": "See Compliance Status Instantly",
+    "autoCalc": "Auto-Calculation",
+    "notifSchedule": "Notification Schedule",
+    "conflictDetected": "Conflict Detected",
+    "elementGrading": "Element Grading",
+    "retakeWorkflow": "Retake Workflow"
+  },
+  "deepDive": {
+    "myActions": "My Actions",
+    "activeCampaigns": "Active Campaigns",
+    "activeCount": "3 active",
+    "autoScheduler": "Auto-Scheduler",
+    "conflictDetection": "Conflict Detection",
+    "noConflicts": "No assessor conflicts detected",
+    "rbacRoles": "RBAC Roles",
+    "expiringCompetences": "Expiring Competences",
+    "monthlyScore": "Monthly Score"
   }
 }

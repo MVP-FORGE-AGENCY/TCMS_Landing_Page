@@ -123,7 +123,7 @@ export function FooterEnhanced() {
                   </div>
                   <div>
                     <div className="font-semibold text-white">You&apos;re subscribed!</div>
-                    <div className="text-sm text-white/60">Check your inbox for a welcome email.</div>
+                    <div className="text-sm text-white/60">{t("welcomeEmail")}</div>
                   </div>
                 </div>
               ) : (
@@ -163,7 +163,7 @@ export function FooterEnhanced() {
               <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-cyan-500 flex items-center justify-center group-hover:scale-105 transition-transform">
                 <Shield className="w-6 h-6 text-white" />
               </div>
-              <span className="text-2xl font-bold">CertifyCloud</span>
+              <span className="text-2xl font-bold">{t("certifyCloud")}</span>
             </Link>
             <p className="text-white/60 mb-6 max-w-sm">
               {t('tagline')}
@@ -240,7 +240,7 @@ export function FooterEnhanced() {
           
           {/* Company */}
           <div>
-            <h4 className="font-semibold text-white mb-4">Company</h4>
+            <h4 className="font-semibold text-white mb-4">{t("company")}</h4>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.href}>

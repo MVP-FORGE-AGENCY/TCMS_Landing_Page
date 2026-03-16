@@ -152,13 +152,13 @@ export function FinalCTAEnhanced() {
                   <PenLine className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-white">Digital Seal</p>
-                  <p className="text-xs text-white/60">SHA-256 Verified</p>
+                  <p className="text-sm font-semibold text-white">{t("digitalSeal")}</p>
+                  <p className="text-xs text-white/60">{t("shaVerified")}</p>
                 </div>
               </div>
               <div className="flex items-center gap-1.5 text-xs text-emerald-300">
                 <Check className="w-3.5 h-3.5" />
-                <span>QR Code Generated</span>
+                <span>{t("qrGenerated")}</span>
               </div>
             </motion.div>
             
@@ -175,13 +175,13 @@ export function FinalCTAEnhanced() {
                   <Zap className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-white">Auto-Scheduler</p>
-                  <p className="text-xs text-white/60">Batch Sessions</p>
+                  <p className="text-sm font-semibold text-white">{t("autoScheduler")}</p>
+                  <p className="text-xs text-white/60">{t("batchSessions")}</p>
                 </div>
               </div>
               <div className="flex items-center gap-1.5 text-xs text-emerald-300">
                 <Check className="w-3.5 h-3.5" />
-                <span>12 sessions planned</span>
+                <span>{t("sessionsPlanned")}</span>
               </div>
             </motion.div>
             
@@ -198,13 +198,13 @@ export function FinalCTAEnhanced() {
                   <FileCheck className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-white">Smart Alerts</p>
-                  <p className="text-xs text-white/60">Expiry Monitor</p>
+                  <p className="text-sm font-semibold text-white">{t("smartAlerts")}</p>
+                  <p className="text-xs text-white/60">{t("expiryMonitor")}</p>
                 </div>
               </div>
               <div className="flex items-center gap-1.5 text-xs text-amber-300">
                 <span className="w-2 h-2 bg-amber-400 rounded-full animate-pulse" />
-                <span>3 expiring in 30 days</span>
+                <span>{t("expiringIn30Days")}</span>
               </div>
             </motion.div>
           </div>

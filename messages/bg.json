@@ -51,7 +51,18 @@
     "ctaSecondary": "Виж как работи",
     "trust1": "Съвместимо с EASA ADR.OR.D.017",
     "trust2": "Настройка за 7 дни",
-    "trust3": "Без кредитна карта"
+    "trust3": "Без кредитна карта",
+    "badge": "Платформа за авиационно съответствие",
+    "signHere": "Подпиши тук",
+    "comingSoon": "Очаквайте скоро: AI прогнозиране за съответствие",
+    "capabilityPills": {
+      "digitalSignatures": "Цифрови подписи",
+      "smartScheduling": "Умно планиране",
+      "auditReports": "Одитни отчети",
+      "proficiencyChecks": "Проверки на компетентност",
+      "expiryTracking": "Проследяване на изтичане",
+      "rbacSecurity": "RBAC сигурност"
+    }
   },
   "problem": {
     "title": "Скритите разходи от ръчно обучение за съответствие",
@@ -103,7 +114,12 @@
     "security": {
       "title": "Корпоративна сигурност",
       "description": "RBAC (5 роли), RLS изолация на наематели, одитен път (~50 семантични действия), изтичане на пароли, режим само за четене за одитори."
-    }
+    },
+    "valid": "Валидни",
+    "expiring": "Изтичат",
+    "expired": "Изтекли",
+    "verified": "Верифициран",
+    "workflowSteps": ["Проверка", "Оценяване", "Подпис", "Финализиране"]
   },
   "dashboard": {
     "title": "Вижте кой е съвместим на пръв поглед",
@@ -116,7 +132,25 @@
     "expired": "Изтекли",
     "expiryAlert": "Сигнал за изтичане",
     "expiryText": "3 квалификации изтичат",
-    "digitalSignature": "Цифров подпис"
+    "digitalSignature": "Цифров подпис",
+    "fleetReadiness": "Готовност на флота",
+    "updatedRealTime": "Актуализирано в реално време",
+    "allDepartments": "Всички отдели",
+    "complianceTrend": "Тенденция на съответствие",
+    "live": "На живо",
+    "auditPassed": "Одитът премина успешно",
+    "easaInspection": "EASA инспекция завършена",
+    "hrsSaved": "15 часа спестени",
+    "thisWeek": "Тази седмица спрямо ръчно проследяване",
+    "scrollToExplore": "Превърти за да разгледаш",
+    "myActions": "Моите действия",
+    "realTimeUpdates": "Актуализации в реално време",
+    "protocolVerified": "Протоколът е верифициран ✓",
+    "compliant": "Съвместим",
+    "actionRequired": "Изисква действие",
+    "trendThisMonth": "↑ 12% тази месец",
+    "opcExpiring30Days": "3 OPC изтичат до 30 дни",
+    "pendingSignOff": "Чакащо финализиране на протокол"
   },
   "benefits": {
     "title": "Защо авиационните организации избират CertifyCloud",
@@ -210,7 +244,21 @@
       "cta": "Виж демо за здравеопазване"
     },
     "useCases": "Приложения:",
-    "featuredCapability": "Избрана възможност"
+    "featuredCapability": "Избрана възможност",
+    "go": "ОТИДИ",
+    "part145": "Part-145 Поддръжка",
+    "lineMaint": "Линейна подд.",
+    "easaFaa": "EASA/FAA съответствие",
+    "fleetReadiness": "Готовност на флота: B737",
+    "liveLpcOpc": "Live LPC/OPC статус",
+    "studentProgression": "Напредък на студентите",
+    "classId": "Клас 2026-A (CPL/IR)",
+    "safetyCompliance": "Безопасност и съответствие",
+    "auditRequired": "Необходим одит",
+    "locationCompliant": "Съвместим",
+    "groundPhases": ["Наземна подготовка", "Симулатор (FNPT II)", "Летателна фаза"],
+    "groundPhaseStatuses": ["Завършено", "В процес (8/12)", "Предстои"],
+    "crewChecks": ["OPC Валиден", "LPC Изтича", "Line Check"]
   },
   "video": {
     "title": "Вижте CertifyCloud в действие (2:30)",
@@ -294,7 +342,15 @@
       "feature2": "Генериране на PDF досие с едно кликване с пълен одитен път и цифрови подписи",
       "feature3": "Месечен резултат за съответствие с класификация по ниво на риск (Зелено/Жълто/Червено)",
       "feature4": "Контроли за печат и CSV експорт за персонализирани регулаторни отчети"
-    }
+    },
+    "tapToExplore": "Докоснете модул за разглеждане",
+    "trendThisMonth": "↑ 12% тези месец",
+    "opcLpcWorkflow": "OPC/LPC работен процес",
+    "workflowSteps": ["Иницирано", "Оценяване", "Подпис", "Финализиране"],
+    "roles": ["Админ", "Мениджър по обучение", "Инструктор", "Одитор (само четене)", "Служител"],
+    "next30Days": "Следващите 30 дни",
+    "dayWindows": ["0 дни", "30 дни", "60 дни", "90 дни"],
+    "items12": "12 елемента"
   },
   "faq": {
     "title": "Често задавани въпроси",
@@ -339,7 +395,17 @@
     "trust1": "Настройка за 7 дни",
     "trust2": "Без кредитна карта",
     "trust3": "Безплатна миграция на данни включена",
-    "trust4": "Отказ по всяко време"
+    "trust4": "Отказ по всяко време",
+    "digitalSeal": "Цифров печат",
+    "shaVerified": "SHA-256 Верифициран",
+    "qrGenerated": "Генериран QR код",
+    "autoScheduler": "Авто-планировчик",
+    "batchSessions": "Групови сесии",
+    "sessionsPlanned": "12 планирани сесии",
+    "smartAlerts": "Умни известия",
+    "expiryMonitor": "Монитор на изтичане",
+    "expiringIn30Days": "3 изтичащи до 30 дни",
+    "allInOneBadge": "Цялостна платформа за авиационно съответствие"
   },
   "footer": {
     "tagline": "Съответствие без сложност",
@@ -353,6 +419,141 @@
     "legal": "Правни",
     "privacy": "Политика за поверителност",
     "terms": "Условия за ползване",
-    "gdpr": "Съвместимост с GDPR"
+    "gdpr": "Съвместимост с GDPR",
+    "welcomeEmail": "Проверете входящата си кутия за имейл за добре дошли.",
+    "certifyCloud": "CertifyCloud",
+    "company": "Компания"
+  },
+  "scheduleDemo": {
+    "title": "Насрочете вашето демо",
+    "subtitle": "Резервирайте персонализирано представяне",
+    "whatType": "Какъв тип демо бихте искали?",
+    "selectDate": "Изберете дата",
+    "yourDetails": "Вашите данни",
+    "phone": "Телефон",
+    "numEmployees": "Брой служители",
+    "scheduled": "Демото е насрочено!",
+    "name": "Име",
+    "namePlaceholder": "Иван Иванов",
+    "email": "Имейл",
+    "emailPlaceholder": "ivan@airline.com",
+    "company": "Фирма",
+    "companyPlaceholder": "Име на авиокомпания/MRO",
+    "bookDemo": "Резервирай демо"
+  },
+  "floatingElements": {
+    "bookDemo": "Безплатно демо",
+    "demo": "Демо",
+    "support": "Поддръжка на CertifyCloud",
+    "justNow": "Току-що"
+  },
+  "testimonials": {
+    "watchStories": "Гледай истории на клиенти"
+  },
+  "comparisonSection": {
+    "badge": "Спрете лудостта с таблиците",
+    "headingPrefix": "Таблиците не са създадени за",
+    "headingDesc": "Вижте защо организациите преминават към специализирано управление на съответствие.",
+    "oldWay": "Старият начин",
+    "certifyCloudWay": "С CertifyCloud",
+    "lastUpdated": "Последна актуализация: преди 3 седмици (кой редактира?)",
+    "liveAutoUpdated": "На живо • Автоматична актуализация",
+    "hundredPercent": "100% Съвместим",
+    "makeSwitch": "Преминете днес",
+    "freeMigration": "Безплатна миграция на данни • Настройка за 7 дни",
+    "pains": ["Конфликти на версии", "Без одитна следа", "Ръчни изчисления", "Лесно пропускани срокове"],
+    "benefits": ["Видимост в реално време", "Пълна одитна следа", "Автоматични изчисления", "Умни сигнали за изтичане"],
+    "statWeeklyAdmin": "Седмично административно време",
+    "statAuditPrep": "Подготовка за одит",
+    "statMissedExp": "Пропуснати изтичания"
+  },
+  "comparison": {
+    "title": "съответствие",
+    "spreadsheets": {
+      "title": "Електронни таблици",
+      "subtitle": "Ръчни, податливи на грешки, остарели"
+    },
+    "certifycloud": {
+      "title": "CertifyCloud",
+      "subtitle": "Автоматизирано, точно, винаги актуално"
+    },
+    "table": {
+      "name": "Име",
+      "certType": "Тип серт.",
+      "expiry": "Изтича",
+      "status": "Статус",
+      "feature": "Функция"
+    },
+    "jSmith": "И. Иванов",
+    "lpc": "LPC",
+    "expiredAlert": "ИЗТЕКЛО!",
+    "aJones": "А. Георгиева",
+    "opc": "OPC",
+    "unknown": "???"
+  },
+  "solutions": {
+    "trainingCompliance": {
+      "title": "Обучение за съответствие",
+      "header": "Автоматизирано проследяване"
+    },
+    "proficiencyChecks": {
+      "title": "Проверки на компетентност",
+      "header": "Управление на LPC/OPC"
+    },
+    "digitalSignatures": {
+      "title": "Цифрови подписи",
+      "header": "Canvas Pad"
+    },
+    "auditReporting": {
+      "title": "Одитен отчет",
+      "header": "Отчети за съответствие"
+    },
+    "valid": "Валидни",
+    "expiringSoon": "Изтича скоро",
+    "expired": "Изтекли",
+    "records142": "142 записа",
+    "actionRequired": "Изисква се незабавно действие",
+    "canvasPad": "Платно",
+    "pinAuth": "PIN автентикация"
+  },
+  "product": {
+    "trafficLightDashboard": {
+      "title": "Табло със светофари",
+      "header": "Виж статус на съответствие веднага"
+    },
+    "complianceReports": {
+      "title": "Отчети за съответствие",
+      "header": "Филтрирани резултати"
+    },
+    "automatedTracking": {
+      "title": "Автоматизирано проследяване",
+      "header": "Автоматично изчисляване"
+    },
+    "lpcOpcManagement": {
+      "title": "Управление на LPC/OPC",
+      "header": "График на известия"
+    },
+    "paperlessWorkflow": {
+      "title": "Без хартиен работен процес",
+      "header": "Работен процес за повторно изпълнение"
+    },
+    "filteredResults": "Филтрирани резултати",
+    "seeCompliance": "Вижте статуса веднага",
+    "autoCalc": "Автоматично изчисляване",
+    "notifSchedule": "График за известия",
+    "conflictDetected": "Открит е конфликт",
+    "elementGrading": "Оценяване на елементи",
+    "retakeWorkflow": "Процес за повторение"
+  },
+  "deepDive": {
+    "myActions": "Моите действия",
+    "activeCampaigns": "Активни кампании",
+    "activeCount": "3 активни",
+    "autoScheduler": "Авто-планировчик",
+    "conflictDetection": "Откриване на конфликти",
+    "noConflicts": "Няма конфликти на оценяващи",
+    "rbacRoles": "RBAC роли",
+    "expiringCompetences": "Изтичащи компетенции",
+    "monthlyScore": "Месечен резултат"
   }
 }

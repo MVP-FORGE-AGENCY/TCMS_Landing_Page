@@ -3,12 +3,14 @@
 'use client'
 
 import { useState } from 'react'
+import { useTranslations } from 'next-intl'
 import { motion } from 'framer-motion'
 import { CheckCircle, AlertTriangle, XCircle, Filter } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 
 export default function TrafficLightDashboardPage() {
+  const t = useTranslations('product')
   const [selectedFilter, setSelectedFilter] = useState<'all' | 'valid' | 'expiring' | 'expired'>('all')
 
   const mockData = {
@@ -101,7 +103,7 @@ export default function TrafficLightDashboardPage() {
           <div className="bg-slate-50 rounded-card p-8 border border-slate-200">
             <div className="flex items-center gap-2 mb-6">
               <Filter className="w-5 h-5 text-slate-600" />
-              <h3 className="text-h4 text-slate-900">Filtered Results</h3>
+              <h3 className="text-h4 text-slate-900">{t('filteredResults')}</h3>
             </div>
             <div className="space-y-2">
               {(selectedFilter === 'all' 
@@ -120,7 +122,7 @@ export default function TrafficLightDashboardPage() {
       {/* CTA */}
       <section className="section bg-gradient-to-br from-emerald-500 to-green-600 text-white">
         <div className="container-lg text-center">
-          <h2 className="text-h2 md:text-heading mb-4">See Compliance Status Instantly</h2>
+          <h2 className="text-h2 md:text-heading mb-4">{t('seeCompliance')}</h2>
           <Button href="#contact" variant="ghost" size="large">
             Try Interactive Demo
           </Button>

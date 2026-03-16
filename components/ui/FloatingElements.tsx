@@ -1,11 +1,13 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { useTranslations } from 'next-intl'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Calendar, ArrowUp, MessageCircle, X } from 'lucide-react'
 import { ScheduleDemoModal } from './ScheduleDemoModal'
 
 export function FloatingCTA() {
+  const t = useTranslations('floatingElements')
   const [isVisible, setIsVisible] = useState(false)
   const [isModalOpen, setIsModalOpen] = useState(false)
   
@@ -37,8 +39,8 @@ export function FloatingCTA() {
               {/* Button */}
               <div className="relative flex items-center gap-3 px-6 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full text-white font-semibold shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-all group-hover:scale-105">
                 <Calendar className="w-5 h-5" />
-                <span className="hidden sm:inline">Book Free Demo</span>
-                <span className="sm:hidden">Demo</span>
+                <span className="hidden sm:inline">{t('bookDemo')}</span>
+                <span className="sm:hidden">{t('demo')}</span>
               </div>
             </div>
           </motion.button>
@@ -84,6 +86,7 @@ export function BackToTop() {
 }
 
 export function LiveChat() {
+  const t = useTranslations('floatingElements')
   const [isOpen, setIsOpen] = useState(false)
   const [hasNotification, setHasNotification] = useState(true)
   
@@ -128,7 +131,7 @@ export function LiveChat() {
                   <MessageCircle className="w-5 h-5" />
                 </div>
                 <div>
-                  <div className="font-semibold">CertifyCloud Support</div>
+                  <div className="font-semibold">{t('support')}</div>
                   <div className="text-xs text-white/80 flex items-center gap-1">
                     <span className="w-2 h-2 bg-emerald-400 rounded-full" />
                     We typically reply in minutes
@@ -143,7 +146,7 @@ export function LiveChat() {
                 <p className="text-sm text-slate-700">
                   👋 Hi there! How can we help you today?
                 </p>
-                <span className="text-xs text-slate-400 mt-1 block">Just now</span>
+                <span className="text-xs text-slate-400 mt-1 block">{t('justNow')}</span>
               </div>
             </div>
             

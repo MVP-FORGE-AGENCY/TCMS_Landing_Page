@@ -12,6 +12,7 @@ import { Button } from '@/components/ui/Button'
 import { cn } from '@/lib/cn'
 
 function IndustryVisual({ activeId }: { activeId: string }) {
+  const t = useTranslations('industries')
   if (activeId === 'airlines') {
     return (
       <div className="w-full bg-slate-900 rounded-xl p-6 border border-slate-800 shadow-2xl relative overflow-hidden">
@@ -23,7 +24,7 @@ function IndustryVisual({ activeId }: { activeId: string }) {
             </div>
             <div className="text-xs text-slate-400">Live LPC/OPC Status</div>
           </div>
-          <div className="px-2 py-1 bg-emerald-500/20 text-emerald-400 rounded text-xs font-mono">GO</div>
+          <div className="px-2 py-1 bg-emerald-500/20 text-emerald-400 rounded text-xs font-mono">{t("go")}</div>
         </div>
         
         <div className="space-y-3">
@@ -113,9 +114,9 @@ function IndustryVisual({ activeId }: { activeId: string }) {
               <Wrench className="w-4 h-4 text-orange-400" />
               Technician Matrix
             </div>
-            <div className="text-xs text-slate-400">Part-145 Maintenance</div>
+            <div className="text-xs text-slate-400">{t("part145")}</div>
           </div>
-          <div className="px-2 py-1 bg-slate-800 text-slate-300 border border-slate-700 rounded text-xs">Line Maint.</div>
+          <div className="px-2 py-1 bg-slate-800 text-slate-300 border border-slate-700 rounded text-xs">{t("lineMaint")}</div>
         </div>
         
         <div className="grid grid-cols-2 gap-3">
